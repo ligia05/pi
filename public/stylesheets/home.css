@@ -1,0 +1,17 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+height: 100%;
+font-size: 16px;  
+}
+header{
+    background-color: rgb(226, 43, 211);
+
+}
+.cointeiner{
+    background-color: blueviolet;
+}
