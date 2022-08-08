@@ -14,4 +14,9 @@ header{
 }
 .cointeiner{
     background-color: blueviolet;
+    height: 200px;
+}
+.logo{
+    width: 230px;
+    height: 200px;
 }
