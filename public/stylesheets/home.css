@@ -12,19 +12,30 @@ header{
     background-color: rgb(226, 43, 211);
 
 }
+.frete{
+  margin-left: 10px;
+}
 section.cointeiner{
     display: flex;
     background-color: rgb(83, 72, 93);
-    height: 200px;
+    height: 170px;
 
 }
-img.logo{
+.log{
     display: flex;
     justify-content: center;
     align-self: center;
     width: 200px;
-    height: 180px;
-    margin-left: 380px;
+    height: 100px;
+    margin-left: 410px;
+ 
+    border-radius:10px;
+}
+.compre{
+  display: flex;
+  width: 800px;
+  margin-left: 270px;
+  margin-top: 20px;
 }
 
 
@@ -94,10 +105,10 @@ img.logo{
   }
   
   .slideshow-conteudo {
-    max-width: 1000px;
+    max-width: 850px;
     position: relative;
-    margin: auto;
-   
+  padding-top: 20px;
+   margin: auto;
   }
   
   /* Hide the images by default */
