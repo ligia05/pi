@@ -9,16 +9,46 @@ height: 100%;
 font-size: 16px;  
 }
 header{
-    background-color: rgb(226, 43, 211);
+display: block;
+  background-color: rgb(226, 43, 211);
+    height: 50px;
+    
 
 }
-.frete{
-  margin-left: 10px;
+
+
+
+header h2{
+margin-left: 20px;
+  width: 850px;
+ 
+}
+
+.ent{
+ display: flex;
+width: 500px;
+flex-direction: row;
+align-self: center;
+  font-size: 25px; 
+margin-bottom: 40px;
+margin-left: 350px;
+font-weight:680;
+}
+.cami{
+  margin-left: 150px;
+  font-weight:700;
+  margin-left: 850px;
+  flex-direction: row;
+  align-self: center;
+  margin-bottom: -40px;
 }
 section.cointeiner{
     display: flex;
     background-color: rgb(83, 72, 93);
     height: 170px;
+    display: flex;
+
+
 
 }
 .log{
@@ -105,7 +135,7 @@ section.cointeiner{
   }
   
   .slideshow-conteudo {
-    max-width: 850px;
+    max-width: 1200px;
     position: relative;
   padding-top: 20px;
    margin: auto;
@@ -113,7 +143,8 @@ section.cointeiner{
   
   /* Hide the images by default */
   .mySlides {
-    display: none;
+    display: block;
+  
   }
   
   /* Next & previous buttons */
@@ -189,4 +220,63 @@ section.cointeiner{
     from {opacity: .4}
     to {opacity: 1}
   }
+
+.cont{
+  display: flex;
+}
+.gri{
   
+  width: 100%;
+    display: grid;
+    grid-template-areas:
+    'A A B B'
+    'C C D D'
+    'C C H H'
+    'G G F F';
+    grid-gap: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #fff
+}
+.ofer{
+  display: grid;
+  grid-area: A;
+   font-weight: bold;
+   font-size: 30px;
+   margin-left: 30px;
+
+ 
+ }
+ .ofer2{
+   display: grid;
+   grid-area: B;
+    font-weight: bold;
+    font-size: 20px;
+ }
+ 
+.linhaSam{
+
+  width: 500px;
+  height: 300px;
+
+}
+ 
+ .form{
+   display: grid;
+   grid-area: C;
+   margin-top: 20px;
+
+  
+   
+ }  
+ .fom{
+  display: grid;
+  grid-area: H;
+ }
+ 
+ .cl{
+  display: grid;
+  grid-area: F;
+  margin-top: 400px;
+  margin-right: 20px;
+ }
