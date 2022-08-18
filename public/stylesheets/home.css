@@ -255,8 +255,9 @@ section.cointeiner{
  }
  
 .linhaSam{
-
-  width: 500px;
+display: grid;
+  grid-area: C;
+width: 500px;
   height: 300px;
 
 }
@@ -265,18 +266,32 @@ section.cointeiner{
    display: grid;
    grid-area: C;
    margin-top: 20px;
-
-  
+   width: 200px;
+  }   
+    
+  .galaxy{
+grid-area: D;
+display: grid;
+height: 200px;
+  }
    
- }  
+ 
  .fom{
   display: grid;
-  grid-area: H;
+  grid-area: F;
+  font-size: 20px;
+  height: 30px;
+  margin-top: 50px;
  }
  
  .cl{
   display: grid;
   grid-area: F;
-  margin-top: 400px;
+
   margin-right: 20px;
+ }
+ .act{
+  display: grid;
+  grid-area: F;
+
  }
