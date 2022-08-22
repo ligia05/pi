@@ -44,12 +44,13 @@ font-weight:680;
 }
 section.cointeiner{
     display: flex;
-    background-color: rgb(83, 72, 93);
+    background-color: rgb(67, 42, 73);
     height: 170px;
-    display: flex;
 
+}
+section.cointeiner.icon-bar{
 
-
+  background-color: rgb(67, 42, 73);
 }
 .log{
     display: flex;
@@ -118,7 +119,7 @@ section.cointeiner{
   }
   .icon-bar {
     width: 90px; /* Set a specific width */
-    background-color: rgb(83, 72, 93); /* Dark-grey background */
+    background-color: rgb(67, 42, 73) /* Dark-grey background */
   }
   
   .icon-bar a {
@@ -231,7 +232,7 @@ section.cointeiner{
     grid-template-areas:
     'A A B B'
     'C C D D'
-    'C C H H'
+    'E E D D'
     'G G F F';
     grid-gap: 10px;
     margin-left: 8px;
@@ -262,23 +263,26 @@ width: 500px;
 
 }
  
- .form{
+ .cels{
    display: grid;
-   grid-area: C;
-   margin-top: 20px;
-   width: 200px;
+   grid-area: F;
+   margin-top: 202px;
+   margin-right: 20px;
+   width: 500px;
+   height: 227;
   }   
     
   .galaxy{
 grid-area: D;
 display: grid;
 height: 200px;
+margin-left: 505px;
   }
    
  
  .fom{
   display: grid;
-  grid-area: F;
+  grid-area: D;
   font-size: 20px;
   height: 30px;
   margin-top: 50px;
@@ -287,11 +291,15 @@ height: 200px;
  .cl{
   display: grid;
   grid-area: F;
-
-  margin-right: 20px;
+  margin-top: 200px;
  }
+
+
  .act{
   display: grid;
-  grid-area: F;
+  grid-area: D;
+  margin-left:100px;
+  margin-top: 100px;
+  width: 500px;
 
  }
