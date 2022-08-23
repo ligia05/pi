@@ -44,13 +44,13 @@ font-weight:680;
 }
 section.cointeiner{
     display: flex;
-    background-color: rgb(67, 42, 73);
+    background-color: rgb(85, 83, 86);
     height: 170px;
 
 }
 section.cointeiner.icon-bar{
 
-  background-color: rgb(67, 42, 73);
+  background-color: rgb(85, 83, 86);
 }
 .log{
     display: flex;
@@ -119,7 +119,7 @@ section.cointeiner.icon-bar{
   }
   .icon-bar {
     width: 90px; /* Set a specific width */
-    background-color: rgb(67, 42, 73) /* Dark-grey background */
+    background-color: rgb(85, 83, 86); /* Dark-grey background */
   }
   
   .icon-bar a {
@@ -230,11 +230,11 @@ section.cointeiner.icon-bar{
   width: 100%;
     display: grid;
     grid-template-areas:
-    'A A B B'
+    'A A A A'
     'C C D D'
-    'E E D D'
-    'G G F F';
-    grid-gap: 10px;
+    'C C D D'
+    'F F F F';
+   
     margin-left: 8px;
     margin-right: 8px;
     background-color: #fff
@@ -244,32 +244,43 @@ section.cointeiner.icon-bar{
   grid-area: A;
    font-weight: bold;
    font-size: 30px;
-   margin-left: 30px;
+margin-left: -310px;
+width: 560px;
 
  
  }
  .ofer2{
    display: grid;
-   grid-area: B;
+   grid-area: A;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
+    margin-left:400px;
+    margin-bottom: 5px;
+width: 500px;
  }
+ .tx{
+  display: grid;
+  grid-area: A;
  
+ }
 .linhaSam{
 display: grid;
   grid-area: C;
 width: 500px;
   height: 300px;
+  margin-left: 45px;
+  margin-top: 30px;
 
 }
  
  .cels{
    display: grid;
    grid-area: F;
-   margin-top: 202px;
-   margin-right: 20px;
+  margin-left: -750px;
+  
    width: 500px;
    height: 227;
+   margin-bottom: 15px;
   }   
     
   .galaxy{
@@ -285,21 +296,29 @@ margin-left: 505px;
   grid-area: D;
   font-size: 20px;
   height: 30px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 350px;
+ }
+ .esc{
+  display: grid;
+  grid-template: D;
+  margin-left: -50px;
+  width: 400px;
  }
  
- .cl{
-  display: grid;
-  grid-area: F;
-  margin-top: 200px;
- }
 
 
  .act{
   display: grid;
   grid-area: D;
-  margin-left:100px;
-  margin-top: 100px;
-  width: 500px;
-
+margin-left: 300px;
+margin-bottom: 80px;
+  width: 800px;
+  height: 0;
+font-size: 20px;
+ }
+ .form{
+  margin-bottom: 30px;
+  display: grid;
+  grid-area: D;
  }
