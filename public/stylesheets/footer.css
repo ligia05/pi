@@ -1,0 +1,62 @@
+.footer{
+    position:flex;
+    background-color: #2a1934;
+    height: 80px;
+    width: 100%;
+    margin-top:100px;
+    bottom: 0;
+    
+    }
+    .quem{
+    transition: all 0.25s;
+    
+    display: flex;
+    align-items:center;
+    }
+    .quem > a {
+      text-decoration: none;
+       font-size: 30px;
+      color: #fff;
+        margin-left: 400px;
+        margin-top: -60px;
+        position: relative;
+        bottom: 0;
+        text-shadow: 0 0 0 none;
+        transition: all 0.25s;
+    }
+    
+    .logs > img{
+      position: relative;
+        margin-left: 50px;
+      
+        width: 120px;
+        height: 70px;
+        transition: all 0.25s;
+    }
+    .insta{
+      
+       
+        display: flex;
+        align-items: flex-end; 
+    }
+    .insta > img{
+      position: relative;
+        bottom: 0;
+      margin-left: 870px;
+      margin-top: -70px;
+      transition: all 0.25s;
+      padding: 10px;
+    }
+    .whats{
+     
+      display: flex;
+      align-items: flex-end;  
+    }
+    .whats > img{
+      position: relative;
+      bottom: 0;
+    margin-left: 960px;
+    margin-top: -100px;
+    transition: all 0.25s;
+    padding: 10px;
+    }

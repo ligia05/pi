@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Loja Express</title>
-    <link rel='stylesheet' href='/stylesheets/home.css' />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,31 +10,9 @@
   </head>
   
   <body>
-    <header>
-    
-      <h2 class="frete">FRETE GRÁTIS | Válido para compras no Espirito Santo acima de R$100</h2>   
-  
-    </header>
-  <section class="cointeiner"> 
-    <div class="icon-bar">
-      
-      <a href="#"><i class="fa fa-search"></i></a> 
-    </div>
-    <img class="log" src="/images/log.png" alt="">
-            
-    <section class="menu">
-      <div class="dropdown">
-      <button class="dropbtn">MENU</button>
-      <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-     </div>
-    </div>
-            
-    </section>
-
-  
+    <link rel="stylesheet" href="../stylesheets/home.css">
+    <%- include('./parts/header') %> 
+    <link rel='stylesheet' href='../stylesheets/home.css' />
   </section>
     <div class="img"><img class="compre" src="/images/compre3.png" alt="">
      <img class="cami" src="/images/cami.png" alt="">
@@ -163,14 +141,9 @@ function showSlides(n) {
       
       </div>
   </section>
-      <section class="footerconteiner">
-       <footer>
-          
-          <div class="logs">
-           <img class="logf"  src="/images/logf.png" alt="">
-         </div>      
-     </footer>
-   </section> 
+      
+    <%- include('./parts/footer') %> 
+ 
 </body>
 
 </html>
