@@ -222,103 +222,128 @@ section.cointeiner.icon-bar{
     to {opacity: 1}
   }
 
-.cont{
-  display: flex;
-}
-.gri{
+
+
+
+
+.tx {
+display: flex;
+ 
+
   
-  width: 100%;
-    display: grid;
-    grid-template-areas:
-    'A A A A'
-    'C C D D'
-    'C C D D'
-    'F F F F';
-   
-    margin-left: 8px;
-    margin-right: 8px;
-    background-color: #fff
+  font-size: 30px;
 }
 .ofer{
-  display: grid;
-  grid-area: A;
-   font-weight: bold;
-   font-size: 30px;
-margin-left: -310px;
-width: 560px;
-
- 
- }
- .ofer2{
-   display: grid;
-   grid-area: A;
-    font-weight: bold;
-    font-size: 25px;
-    margin-left:400px;
-    margin-bottom: 5px;
-width: 500px;
- }
- .tx{
-  display: grid;
-  grid-area: A;
- 
- }
+display: flex;
+font-size: 30px;
+font-weight: bold;
+height: 80px;
+width: 700px;
+margin-left: 20px;
+margin-top: 20px;
+}
+.ofer2 {
+font-size: 25px;
+display: flex;
+flex-direction: row;
+font-weight: 400;
+width: 600px;
+height: 50px;
+margin-top: -70px;
+margin-left: 800px;
+}
+.linha{
+  margin-top: 50px;
+}
+  
+.dois{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between ;
+}
+.act{
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top:30px ;
+  margin-right: 180px;
+  font-size: 20px;
+}
+ .fom {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 400px;
+}
+.tag{
+  width: 400px;
+  margin-left: 200px;
+}
+.labell{
+  display: flex;
+  margin-top: -30px;
+  width: 400px;
+  margin-left: 190px;
+  padding: 8px;
+  
+}
 .linhaSam{
-display: grid;
-  grid-area: C;
-width: 500px;
-  height: 300px;
-  margin-left: 45px;
-  margin-top: 30px;
+  display:inline-block;
+  width: 532px;
+  height: 329px;
+  margin-left: 40px;
+  margin-top: -50px;
+  
+}
+.tel1{
+  width: 532px;
+  height: 329px;
+}
+.cels{
+  display: inline-block;
+margin-left: 200px;
+
 
 }
- 
- .cels{
-   display: grid;
-   grid-area: F;
-  margin-left: -750px;
+.trab{
+  font-size: 35px;
+  margin-left: 20px;
+}
+.melhores{
+  margin-top: 80px;
+  background-color: #d1a3ec5e;
+  width:90%;
+  margin-left: 70px;
+}
+.loja{
+  font-size: 40px;
+  margin-left: 550px;;
+}
+.logs{
   
-   width: 500px;
-   height: 227;
-   margin-bottom: 15px;
-  }   
-    
-  .galaxy{
-grid-area: D;
-display: grid;
-height: 200px;
-margin-left: 505px;
-  }
+    display: flex;
+
+  margin-top: 30px;
+    width: 90px;
+    height: 55px;
+    margin-left: 40px;
+    bottom: 0;
    
- 
- .fom{
-  display: grid;
-  grid-area: D;
-  font-size: 20px;
-  height: 30px;
-  margin-bottom: 50px;
-  width: 350px;
- }
- .esc{
-  display: grid;
-  grid-template: D;
-  margin-left: -50px;
-  width: 400px;
- }
- 
+}
+section.footerconteiner{
+  display: flex;
+  background-color: #2a1934;
+height: 80px;
+justify-self: end;
+margin-top: 50px;
+}
 
 
- .act{
-  display: grid;
-  grid-area: D;
-margin-left: 300px;
-margin-bottom: 80px;
-  width: 800px;
-  height: 0;
-font-size: 20px;
- }
- .form{
-  margin-bottom: 30px;
-  display: grid;
-  grid-area: D;
- }
+
+
+
+
+
+
+
+
+
