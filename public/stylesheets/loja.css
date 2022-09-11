@@ -4,71 +4,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.caixa{
-    display: flex;
-    font-size: 40px; 
-     
-}
-.grid{
-    display: grid;
-      grid-template-areas:
-      'A A B B'
-      'C C D D'
-      'E E F F'
-      'G G H H';
-      gap: 50px 100px;
-  grid-template-columns: auto auto auto;
-  
-  padding: 10px;
-      width: 100%;
-      column-gap: 50px;
-      row-gap: 50px;
-}
-.um{
-    display: grid;
-    grid-area: A;
-    border: 1px solid;
-    width: 400px;
-    height: 100px;
-    margin-top: 30px;
-}
-.dois{
-    display: grid;
-    grid-area: B;
-    width: 400px;
-    height: 100px;
-    border: 1px solid;
-}
-.tres{
-    display: grid;
-    grid-area: C;
-    width: 400px;
-    height: 100px;
-    border: 1px solid;
-}
-.quatro{
-    display: grid;
-    grid-area: D;
-    width: 400px;
-    height: 100px;
-    border: 1px solid;
-}
-.cinco{
-    display: grid;
-    grid-area: E;
-    width: 400px;
-    height: 100px;
-    border: 1px solid;
-}
-.seis{
-    display: grid;
-    grid-area: F;
-    width: 400px;
-    height: 100px;
-    border: 1px solid;
+html{
+    height: 100%;
+    font-size: 16px;  
+    background-color: rgba(0, 0, 0, 0.814);
+    color: white;
+    }
     
-}
-.a{
- text-decoration-line: none;
-}
+       
+     
+     .um{
+display: flex;
+
+     }
+     .dois{
+        display: flex;
+     }
+     nav {
+        position:fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        padding: 20px;
+        background-color: rgb(50, 30, 50);
+        margin-top: 200px;
+        
+    }
+    .tds{
+       text-decoration: none; 
+       color: white;
+    }
+
+
+
+

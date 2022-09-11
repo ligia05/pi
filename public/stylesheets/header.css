@@ -3,56 +3,77 @@ header{
     display: block;
       background-color: rgb(226, 43, 211);
         height: 50px;
-        
-    
+ 
     }
-    
-    
-    
+
     header h2{
     margin-left: 20px;
-      width: 850px;
+    width: 850px;
      
     }
     
     .ent{
      display: flex;
-    width: 500px;
+  
     flex-direction: row;
     align-self: center;
-      font-size: 25px; 
+    font-size: 30px; 
     margin-bottom: 40px;
     margin-left: 350px;
     font-weight:680;
     }
-    .cami{
-      margin-left: 150px;
-      font-weight:700;
-      margin-left: 850px;
-      flex-direction: row;
-      align-self: center;
-      margin-bottom: -40px;
-    }
+    
     section.cointeiner{
-        display: flex;
-        background-color: rgb(85, 83, 86);
+       margin-top: 8px;
+      display: flex;
+       background-color:  #2a1934;
         height: 170px;
-    
+        box-shadow: 0 4px 16px -2px gray;
+  padding: 15px;
     }
-    section.cointeiner.icon-bar{
     
-      background-color: rgb(85, 83, 86);
-    }
+    
     .log{
         display: flex;
-        justify-content: center;
-        align-self: center;
+       
         width: 200px;
         height: 100px;
-        margin-left: 410px;
+      flex-direction: row-reverse;
      
         border-radius:10px;
     }
+    .topnav {
+     
+      height: 100px;
+    }
+    
+    .topnav a {
+      float: left;
+      display: flex;
+      background-color: black;
+      text-align: center;
+     
+      height: 80px;
+      text-decoration: none;
+      font-size: 25px;
+      padding: 14px 16px;
+    }
+    
+    .topnav a:hover {
+      background-color: rgba(85, 83, 86, 0.647);
+      color: black;
+    }
+    
+    input.search{
+      margin-left: -400px;
+      margin-top: 70px;
+      width: 200px;
+    }
+    .topnav a.active {
+      background-color:rgba(85, 83, 86, 0.647);
+      color: white;
+    }
+    
     .compre{
       display: flex;
       width: 800px;
@@ -62,7 +83,7 @@ header{
     
     
     .dropbtn {
-        background-color:  #2a1934;
+        background-color:  #0603078e;
         color: white;
         padding: 16px;
         font-size: 20px;
@@ -87,7 +108,7 @@ header{
         z-index: 1;
       }
     .menu{
-        margin-left: 500px;
+        margin-left: 60%;
         margin-top: 30px;
       }
       
@@ -108,20 +129,4 @@ header{
       .dropdown:hover .dropbtn {
         background-color:black;
       }
-      .icon-bar {
-        width: 90px; /* Set a specific width */
-        background-color: rgb(85, 83, 86); /* Dark-grey background */
-      }
       
-      .icon-bar a {
-        display: block; /* Make the links appear below each other instead of side-by-side */
-        text-align: center; /* Center-align text */
-        padding: 16px; /* Add some padding */
-        transition: all 0.3s ease; /* Add transition for hover effects */
-        color: white; /* White text color */
-        font-size: 36px; /* Increased font-size */
-      }
-      
-      .icon-bar a:hover {
-        background-color: #000; /* Add a hover color */
-      }

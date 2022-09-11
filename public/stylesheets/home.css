@@ -3,10 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 html{
 height: 100%;
 font-size: 16px;  
+background-color: rgba(0, 0, 0, 0.814);
 }
   
   .slideshow-conteudo {
@@ -78,7 +80,7 @@ font-size: 16px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: 0.6s ease;
   }
   
   .active, .dot:hover {
@@ -97,7 +99,9 @@ font-size: 16px;
   }
 
 
-
+.ent{
+  color: #fff;
+}
 
 
 .tx {
@@ -115,6 +119,7 @@ height: 80px;
 width: 700px;
 margin-left: 20px;
 margin-top: 20px;
+color: #fff;
 }
 .ofer2 {
 font-size: 25px;
@@ -125,9 +130,11 @@ width: 600px;
 height: 50px;
 margin-top: -70px;
 margin-left: 800px;
+color: #fff;
 }
 .linha{
   margin-top: 50px;
+  color: #fff;
 }
   
 .dois{
@@ -142,6 +149,7 @@ margin-left: 800px;
   padding-top:30px ;
   margin-right: 180px;
   font-size: 20px;
+  color: #fff;
 }
  .fom {
   display: flex;
@@ -182,27 +190,35 @@ margin-top: -200px
 .trab{
   font-size: 35px;
   margin-left: 20px;
+  color:#fff;
 }
 .melhores{
   margin-top: 80px;
-  background-color: #d1a3ec5e;
+  background-color: black;
   width:90%;
   margin-left: 70px;
 }
 .loja{
   font-size: 40px;
-  margin-left: 550px;;
+  margin-left: 540px;
+  color: #fff;
+  background-color: black;
+  width: 350px;
+  margin-top: 10px;
+  
+}
+.conheca{
+  color: #fff;
+  text-decoration: none;
+  text-decoration-line: none;
+margin-bottom: 5px;
+  
 }
 
 section .logs{
-  
- 
 
     width: 100%;
-   
-   
 
-   
 }
 .footer{
 position:flex;
