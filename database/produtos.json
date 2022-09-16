@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nome": "MotoG5" ,
+        "preco": 938.5,
+        "img": "https://www.tudocelular.com/Motorola/fichas-tecnicas/n3429/Motorola-Moto-G5.html",
+        "destaque": true,
+        "score": 11
+    },
+    {
+        "id": 2,
+        "nome": "Iphone 12",
+        
+        "preco": 1148.55,
+        "img": "https://tecnoblog.net/testamos/iphone-12-pro-review/",
+        "destaque": false,
+        "score": 17
+    },
+    {
+        "id": 3,
+        "nome": "Galaxy S20",
+        
+        "preco": 38.5,
+        "img": "https://tecnoblog.net/sobre/galaxy-s20-fe/",
+        "destaque": true,
+        "score": 11
+    },
+    {
+        "id": 4,
+        "nome": "Xiomi mi 9",
+        
+        "preco": 33.5,
+        "img": "https://www.mi.com/br/mi9/",
+        "destaque": false,
+        "score": 1
+    },
+    {
+        "id": 5,
+        "nome": "Samsung note",
+        
+        "preco": 3338.5,
+        "img": "/stylesheets/notejs.png",
+        "destaque": true,
+        "score": 1
+    },
+    {
+        "id": 6,
+        "nome": "Moto Flip",
+        
+        "preco": 2140.5,
+        "img": "https://www.motorola.com/us/smartphones-razr/p?skuId=277",
+        "destaque": true,
+        "score": 1
+    },
+    {
+        "id": 7,
+        "nome": "Iphone 10",
+       
+        "preco": 2238.5,
+        "img": "/stylesheets/ip_dez.png",
+        "destaque": true,
+        "score": 1
+    },
+    {
+        "id": 8,
+        "nome": "Iphone 13",
+       
+        "preco": 3338.5,
+        "img": "/stylesheets/ip_treza.png",
+        "destaque": true,
+        "score": 1
+    }
+    
+]

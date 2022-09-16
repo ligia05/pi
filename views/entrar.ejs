@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja Express</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+
+
+<main>
+
+    <form method="post" action="/usuarios/login" id="formLogin">
+        <h2>Faça Login</h2>
+        <label>
+            <span>E-mail:</span>
+            <input type="email" name="email">
+        </label>
+        <label>
+            <span>Senha:</span>
+            <input type="password" name="senha">
+        </label>
+        <div class="controles">
+            <button type="submit">Entrar</button>
+        </div>
+    </form>
+
+    <form method="post" action="/usuarios/add" id="formCadastrar">
+        <h2>Cadastre-se</h2>
+        <label>
+            <span>E-mail:</span>
+            <input type="email" name="email">
+        </label>
+        <label>
+            <span>Senha:</span>
+            <input type="password" name="senha">
+        </label>
+        <label>
+            <span>Confirme Senha:</span>
+            <input type="password" name="confirmacao">
+        </label>
+        <label>
+            <span>Endereço:</span>
+            <input type="text" name="endereco">
+        </label>
+        <div class="controles">
+            <button type="submit">Cadastrar</button>
+        </label>
+    </form>

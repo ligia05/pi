@@ -34,6 +34,29 @@ display: flex;
        text-decoration: none; 
        color: white;
     }
+    .dois{
+   padding: 20px;
+   width: 430px;
+   height: 230px;
+    }
+    .tres{
+      padding: 20px;
+      width: 430px;
+   height: 230px;
+    }
+    .note_sam{
+      padding: 20px;
+      width: 430px;
+   height: 230px;
+    }
+    .sams{
+      font-size: 40px;
+      margin-left: 10px;
+    }
+    .galaxy{
+      font-size: 30px;
+      margin-left: 15px;
+    }
 
 
 
