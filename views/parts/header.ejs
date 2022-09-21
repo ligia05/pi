@@ -18,25 +18,7 @@
   </section>
 </section>
 
-    <div>
-        <% if(aparelhosNoCarrinho.length > 0){ %>
-        <table>
-            <% for(p of aparelhosNoCarrinho) {%>
-            <tr>
-                <td>
-                    <img src="<%= p.img %>" alt="<%= p.nome %>">
-                </td>
-                <td><%= p.nome %></td>
-                <td>R$ <%= p.preco %></td>
-            </tr>
-            <% } %>
-        </table>
-        <span id="total">
-            Total: R$ 999,99
-        </span>
-<% if (!usuarioLogado) %> 
-        <a id="linkEntrar" href="/usuarios/entrar">Faça o login ou cadastre-se</a>
-
+    
         <form id="formAddPedido" action="/aparelhos/addPedido" method="post">
             <label>
                 <span>Endereço de Entrega:</span>
@@ -63,9 +45,7 @@
             </footer>
         </form>
 
-        <% } else { %>
-            Nenhum aparelho no carrinho
-        <% } %>
+        
     </div>
 </body>
 </html>

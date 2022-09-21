@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var acesso= require('./Middlewares/acesso');
 var index = require('./Router/index');
 var loja = require('./Router/loja');
 //var usersRouter = require('./Router/user');
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(acesso);
 app.use('/', index);
 app.use('/', loja)
 //app.use('/users', usersRouter);
