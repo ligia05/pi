@@ -1,0 +1,57 @@
+#form-produto {
+	width: 480px;
+	margin: 20vh auto;
+	background-color: rgba(0,0,0,0.5);
+	color: #FFF;
+	padding: 50px;
+}
+
+#form-produto label {
+	display: block;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#form-produto label input {
+	display: block;
+	padding: 5px;
+	border: none;
+	margin-top: 10px;
+	font-size: 1rem;
+	width: 100%;
+}
+
+#form-produto label img{
+	width: 100%;
+	margin-top: 10px;
+	display: block;
+	cursor: pointer;
+}
+
+#form-produto label input[type="file"]{
+	display: none;
+}
+
+#form-produto label div{
+	width: 100%;
+	display: block;
+	font-size: 1rem;
+	background-color: rgba(0, 0, 0,0.5);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+#form-produto button{
+	display: block;
+	font-size: 1rem;
+	background-color: rgb(255, 81, 0);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	width: 100%;
+}

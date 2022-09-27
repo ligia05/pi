@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizzaria Fantástica</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
+      rel="stylesheet"/>
+	<link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+	<link rel="stylesheet" href="/css/crud-adm.css">
+	<nav id="produto-adm">
+		<div>
+			Express Vix
+			<span>
+				Área Administrativa
+			</span>
+		</div>
+		<ul>
+			<li><a href="/pedidos">Pedidos</a></li>
+			<li><a href="/clientes">Clientes</a></li>
+			<li><a href="/produtos">martphones,Tablets Notebook </a></li>
+			<li><a href="/users">Usuários</a></li>
+			<li><a href="/adm/logout">Sair</a></li>
+		</ul>
+	</nav>
+	<link rel="stylesheet" href="/css/form-produto.css">
+	<form id="form-produto" method="POST" action="/adm/produtos/create" enctype="multipart/form-data">
+		<label>
+			Nome:
+			<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
+		</label>
+
+		<label>
+			Marcas:
+			<input type="text" name="Marcas" id="Marcas" placeholder="Marcas">
+		</label>
+
+		<label>
+			Preço:
+			<input type="number" name="preco" id="preco" step="0.01" >
+		</label>
+
+		<label>
+			Foto:
+			<img src="/images/form.png">
+			<div>Clique para selecione nova imagem</div>
+			<input type="file" name="img" id="img">
+		</label>
+
+		<button type="submit">Salvar</button>
+	</form>
+
+</body>
+</html>

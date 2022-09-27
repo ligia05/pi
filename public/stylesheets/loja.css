@@ -49,10 +49,20 @@ html{
 
        .prod{
          display: flex;
-         width: 110px;
-         height: 220px;
-         padding: 8px;
+         width: 210px;
+         height: 320px;
+         margin-left: 20px;
+     margin-top: 20px;
        }
+       .prods{
+         display: flex;
+         width: 210px;
+         height: 320px;
+         margin-left: 20px;
+         margin-top: 80px;
+
+       }
+      
     
 
 
