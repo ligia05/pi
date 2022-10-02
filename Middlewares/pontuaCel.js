@@ -1,1 +1,0 @@
-function pontuaCel(req,res, next)

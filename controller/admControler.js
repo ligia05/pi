@@ -1,32 +1,30 @@
 module.exports = {
-    showLogin:(req,res) => {
-       return res.render('login');
+    showLogin: (req, res) => {
+        return res.render('entrar');
     },
 
- login: (req,res) => {
+    login: (req, res) => {
 
- const {email,senha} = req.body;
-const produtos = require("../database/produtos.json");
-      const produto = produtos.find(
-          user => (user.email == email && user.senha == senha)
+        const { email, senha } = req.body;
+        const produtos = require("../database/produtos.json");
+        const produto = produtos.find(
+            user => (user.email == email && user.senha == senha)
         );
 
-        if(produto == undefined){
-         return res.send("senha ou email inválidos");
+        if (produto == undefined) {
+            return res.send("senha ou email inválidos");
         }
-        req.session.produto= produto;
+        req.session.produto = produto;
         return res.redirect('/adm/produtos/create');
 
-},   
-logout: (req,res) => {
-    req.session.destroy();
-    res.redirect("/adm/login");
-}
-}
-const controller = {
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect("/adm/login");
+    },
     
-    listar: (req, res)=> {
-        return res.render('index',{produtos, busca:""});
+    listar: (req, res) => {
+        return res.render('index', { produtos, busca: "" });
         // res.send(produtos)
     },
 
@@ -40,50 +38,50 @@ const controller = {
         // Capturar do array a produto com o id requisitado (produtos.find)
         const produto = produtos.find(
             (p, i) => {
-                idPrev = produtos[i-1]==undefined?undefined:produtos[i-1].id;
-                idNext = produtos[i+1]==undefined?undefined:produtos[i+1].id;
+                idPrev = produtos[i - 1] == undefined ? undefined : produtos[i - 1].id;
+                idNext = produtos[i + 1] == undefined ? undefined : produtos[i + 1].id;
                 return p.id == idProduto
             });
 
         // Retornar a produto encontrada para o cliente (res.send())
-        res.render('produto',{produto, idNext, idPrev});
+        res.render('produto', { produto, idNext, idPrev });
 
     },
 
-    busca: (req,res) => {
+    busca: (req, res) => {
 
         // Capturar a string digitada pelo visitante
-        const string = req.query.q.trim();
+
 
         // Filtrar do arrays de produtos somente as produtos
         // que que tiverem a string buscada no nome
-        const produtosFiltras = produtos.filter(
+        const produtosFiltrados = produtos.filter(
             p => p.nome.toUpperCase().includes(string.toUpperCase())
         );
 
         // Renderizar a view index passando para ela
         // as produtos filtradas
-        res.render('index', {produtos:produtosFiltrados, busca:string});
+        res.render('index', { produtos: produtosFiltrados, busca: string });
     },
 
     create: (req, res) => {
-        res.render('crud-produtos/create')
+        res.render('parts/crud/crud.ejs')
     },
 
-    store: (req,res) => {
+    store: (req, res) => {
 
         const erros = validationResult(req);
-        
-        if(!erros.isEmpty()){
+
+        if (!erros.isEmpty()) {
             // return res.send(erros.mapped());
-            res.render('crud-produtos/create', {erros: erros.mapped()})
+            res.render('adm/produto/cadastro', { erros: erros.mapped() })
         }
 
         const nome = req.body.nome;
         const marca = req.body.marca
         const preco = Number(req.body.preco);
-        const produto = {nome, marca, preco, img:'/images/' + req.file.filename}
-        
+        const produto = { nome, marca, preco, img: '/images/' + req.file.filename }
+
         // Adicionar o id à produto recém criada
         produto.id = produtos[produtos.length - 1].id + 1;
 
@@ -94,16 +92,14 @@ const controller = {
         fs.writeFileSync(
             __dirname + '/../database/produtos.json',
             JSON.stringify(produtos, null, 4),
-            {flag:'w'}
+            { flag: 'w' }
         );
-        
+
         // Direcionar o usuário para a página que exibe a lista de produtos
         res.redirect('/');
 
     }
-
-
-
 }
+
 
 
