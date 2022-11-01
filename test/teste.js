@@ -5,7 +5,7 @@ const config = {
     host: "localhost",
     port: 3306,
     dialect: 'mysql',
-    database: "projeto"
+    database: "pro_tabela"
 
 }
 const conexao = new sequelize(config);
