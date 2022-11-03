@@ -9,10 +9,10 @@ const config = {
 
 }
 const conexao = new sequelize(config);
-let promise = conexao.query("SELECT * FROM produtos");
+let promise = conexao.query("SELECT * FROM pro_tabela");
 
 promise.then(
-    produtos => (console.log(produtos))
+    pro_tabela => (console.log(pro_tabela))
 )
 
 
