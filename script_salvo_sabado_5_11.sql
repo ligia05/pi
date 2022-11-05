@@ -1,0 +1,70 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema pro_tabela
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema pro_tabela
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `pro_tabela` DEFAULT CHARACTER SET utf8 ;
+USE `pro_tabela` ;
+
+-- -----------------------------------------------------
+-- Table `pro_tabela`.`itens`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pro_tabela`.`itens` (
+  `id_itens` INT NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(100) NOT NULL,
+  `marca` VARCHAR(45) NOT NULL,
+  `preco` DECIMAL(18,2) NOT NULL,
+  `tipo` VARCHAR(80) NOT NULL,
+  `cliente` VARCHAR(100) NOT NULL,
+  `imagem` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_itens`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `pro_tabela`.`cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pro_tabela`.`cliente` (
+  `id_cliente` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(120) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(120) NOT NULL,
+  `endereço` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`id_cliente`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `pro_tabela`.`vendas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pro_tabela`.`vendas` (
+  `id_vendas` INT(11) NOT NULL AUTO_INCREMENT,
+  `itens_id_itens` INT NOT NULL,
+  `cliente_id_cliente` INT(11) NOT NULL,
+  PRIMARY KEY (`id_vendas`, `itens_id_itens`, `cliente_id_cliente`),
+  
+  CONSTRAINT `fk_vendas_itens`
+    FOREIGN KEY (`itens_id_itens`)
+    REFERENCES `pro_tabela`.`itens` (`id_itens`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_vendas_cliente1`
+    FOREIGN KEY (`cliente_id_cliente`)
+    REFERENCES `pro_tabela`.`cliente` (`id_cliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
