@@ -98,19 +98,24 @@ background-color: rgba(0, 0, 0, 0.814);
     to {opacity: 1}
   }
 
-
+.ima{
+  margin-top: 50px;
+  width: 900px;
+  height: 280px;
+}
 .ent{
   color: #fff;
+margin-top: 20px;
+width: 563px;
+height: 46px;
 }
-
-
-.tx {
-display: flex;
- 
-
+.cami{
   
-  font-size: 30px;
+  margin-left: 260px;
+ margin-top: -80px;
 }
+
+
 .ofer{
 display: flex;
 font-size: 30px;
