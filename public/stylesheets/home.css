@@ -199,25 +199,32 @@ margin-top: -200px
 }
 .melhores{
   margin-top: 80px;
-  background-color: black;
+  
   width:90%;
   margin-left: 70px;
+  
 }
+
 .loja{
   font-size: 40px;
   margin-left: 540px;
   color: #fff;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.356);
   width: 350px;
   margin-top: 10px;
+  border-color: #fff;
+  border-radius: 9px;
   
+}
+.loja:hover, .next:hover {
+  background-color: rgba(164, 162, 162, 0.8);
 }
 .conheca{
   color: #fff;
-  text-decoration: none;
-  text-decoration-line: none;
-margin-bottom: 5px;
+  text-decoration:solid;
   
+ margin-bottom: 10px;
+  margin-left: 12px;
 }
 
 section .logs{
