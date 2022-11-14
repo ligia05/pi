@@ -1,5 +1,5 @@
 
-const {Filme, Humor}= require ('../models')
+const {itens}= require ('../models')
 const session = require('express-session')
 
 const Sequelize= require('sequelize')
@@ -40,11 +40,11 @@ const controller = {
   },
 
   // postForm: async (req, res) => {
-  //   const { filme } = req.body;
+  //   const { itens } = req.body;
 
-  //   const novo = await NovoFilme.findOne({
+  //   const novo = await Novoitens.findOne({
   //     where: {
-  //       filme: filme,
+  //       itens: itens,
   //     },
   //   }).catch(console.trace);
 
@@ -73,17 +73,13 @@ const controller = {
     const itens = await itens.findAll({
       limit: 2,
       offset: (page-1)  * 2,
-      include:['humor']
+      
     })
-    const contagem = await Itens.count()
-    const qntPaginas = Math.ceil(contagem / 2)
-    return res.render('lista', {
-      itenssCadastrados:itens,
-      paginas:qntPaginas
-    });
+   
+   
 
   }
 };
 
 
-module.exports = controller
+module.exports = Indexcontroller

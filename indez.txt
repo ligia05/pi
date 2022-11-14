@@ -16,7 +16,7 @@ module.exports = {
         );
 
         if (produto == undefined) {
-            return res.send("senha ou email inv√°lidos");
+            return res.send("senha ou email inv·lidos");
         }
         req.session.produto = produto;
         return res.redirect('/adm/itens/create');
@@ -82,7 +82,7 @@ module.exports = {
         const preco = Number(req.body.preco);
         const produto = { nome, marca, preco, img: '/images/' + req.file.filename }
 
-        // Adicionar o id √† produto rec√©m criada
+        // Adicionar o id ‡ produto recÈm criada
         produto.id = itens[itens.length - 1].id + 1;
 
         // Adicionar a produto ao array de itens
@@ -95,7 +95,7 @@ module.exports = {
             { flag: 'w' }
         );
 
-        // Direcionar o usu√°rio para a p√°gina que exibe a lista de itens
+        // Direcionar o usu·rio para a p·gina que exibe a lista de itens
         res.redirect('/');
 
     }
