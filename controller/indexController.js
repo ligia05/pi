@@ -13,11 +13,26 @@ const controller = {
  loja: (req, res) => {
     res.render("loja");
   },
+  form: (req, res) => {
+    res.render("formulario");
+  },
+  
+  postForm: async (req, res) => {
 
+    const {itens} = req.body;
+  
+    const novo = await itens.findOne({
+      where:{
+       itens:itens
+      }
+    });
+      return res.render('formulario');
+
+  },
  itens: async (req, res) => {
 
     // Capturando Itens do BD
-    let promise = await Itens.findAll();
+    let promise = await itens.findAll();
 
     // Adicionando Itens num array com objetos de Itens {id, nome}
     let arrayItens = [];
@@ -54,13 +69,18 @@ const controller = {
 
   //   res.redirect("/primeiro_acesso");
   // },
+  form: async (req, res) => {
+    let itens = await itens.findAll()
+  
+    res.render('formulario',{itens});
+},
   postForm: async (req, res) => {
 
-    const {iten} = req.body;
+    const {itens} = req.body;
   
-    const novo = await Itens.findOne({
+    const novo = await itens.findOne({
       where:{
-        item:item
+        itens:itens
       }
     });
       return res.render('formulario');
@@ -82,4 +102,4 @@ const controller = {
 };
 
 
-module.exports = Indexcontroller
+module.exports = indexController

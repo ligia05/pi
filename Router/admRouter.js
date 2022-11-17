@@ -1,4 +1,6 @@
+
 const express = require('express')
+const router = express.Router();
 const multer = require("multer");
 const storage= multer.diskStorage(
     {
@@ -8,9 +10,11 @@ const storage= multer.diskStorage(
     }
 );
 const upload= multer({storage})
-const router = express.Router();
-const admController = require('../controller/admControler');
-router.get("/produtos/cadastro",admController.create);
-router.post("/produtos/create",upload.single('img'), admController.store);
 
-module.exports=router
+const admController = require('../controller/admControler');
+const indexController = require('../controller/indexController');
+const validaForm = require('../Middlewares/cadastrador')
+router.get("/formulario", indexController.postform);
+router.post("/formulario",upload.single('img'), admController.store);
+
+module.exports= admRouter

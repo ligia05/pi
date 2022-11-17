@@ -23,14 +23,14 @@ const validaForm = [
         .trim()
         .escape()
         .notEmpty().withMessage('tipo do item precisa ser preenchido').bail()
-        .toInt()
-       
+        .toInt(),
+
 
     check('marca')
         .trim()
         .escape()
         .notEmpty().withMessage('marca do item precisa ser preenchida').bail()
-        .toInt()
+        .toInt(),
 
 
     check('preco')
@@ -45,7 +45,7 @@ const validaForm = [
             return true
         }
         return false
-    }).withMessage('uma imagem precisa ser inserida')
+    }).withMessage('uma imagem precisa ser inserida'),
         
     
 ];
