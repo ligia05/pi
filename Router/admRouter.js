@@ -10,11 +10,12 @@ const storage= multer.diskStorage(
     }
 );
 const upload= multer({storage})
+const operacionalController= require('../controller/operacionalController')
+const loginController = require('../controller/loginController');
+const admController = require('../controller/admController');
 
-const admController = require('../controller/admControler');
-const indexController = require('../controller/indexController');
 const validaForm = require('../Middlewares/cadastrador')
-router.get("/formulario", indexController.postform);
-router.post("/formulario",upload.single('img'), admController.store);
+router.get("/formulario", admController.form);
+//router.post("/formulario",upload.single('img'), operacionalController.store);
 
-module.exports= admRouter
+module.exports= router

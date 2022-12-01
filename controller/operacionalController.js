@@ -30,18 +30,7 @@ const operacionalController = {
         const { id } = req.params;
         const { Itens,cliente,tipo,modelo,preco,marca,produto} = req.body;
         console.log(req.body)
-        // const ItenssCadastrados = await Itens.update({
-        //     titulo:Itens
-
-        // },
-        // {
-        //     where:{
-        //         id:id,
-        //         // id_humores:id
-        //     }
-
-
-        // })
+       
         const imagem = req.file.filename;
         const meusItens = await Itens.findOne({
             where: {

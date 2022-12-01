@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes)=>{
   return sequelize.define(
       "itens", // Nome do model
       {
-          id: {
+          id_itens: {
               type: DataTypes.INTEGER,
               autoIncrement: true,
               allowNull: false,
@@ -17,6 +17,8 @@ module.exports = (sequelize, DataTypes)=>{
               type: DataTypes.STRING,
               allowNull: false
           },
+          
+
           tipo: {
               type: DataTypes.STRING,
               allowNull: false
@@ -31,7 +33,9 @@ module.exports = (sequelize, DataTypes)=>{
         }
       },
       {
-          tableName: "itens"
+          tableName: "itens",
+          timestamps: false
+
       }
   );
 

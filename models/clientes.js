@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes)=>{
     return sequelize.define(
         "clientes", // Nome do model
         {
-            id: {
+            id_cliente: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 allowNull: false,
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes)=>{
                 type: DataTypes.STRING,
                 allowNull: false
             },
-          endereço:{
+          endereco:{
                 type: DataTypes.STRING,
                 allowNull: true
             }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+   
+
+    <!-- fontes B612, Baumans e Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612&family=Baumans&family=Roboto&display=swap"
+        rel="stylesheet">
+    
+</head>
+
+<body>
+    <main>
+        
+        <form class="form" method="post" action="login">
+            <label class="texto-form" for="">Novo no Express? Inscreva-se gratuitamente!</label>
+            <br>
+            <div class="form-buttons">
+                <input class="campo-form" type="email" name="email" id="email" placeholder="Insira seu e-mail">
+                <br>
+                <input class="campo-form" type="password" name="senha" id="senha" placeholder="Insira seu senha">
+                <br>
+                <a href="">Esqueci a senha</a>
+                <br>
+                <button type="submit" class="entrar-btn">Entrar</button>
+                <br>
+                <span>
+                    <input type="checkbox" name="logado" id="lembre-se"><label for="lembre-se">Lembre-se de
+                        mim</label>
+                </span>
+                <br>
+                <!-- <span>
+                    <button id="acesso-fb"><img src="/img/Facebook.png" alt="Botão Facebook"></button><label
+                        for="acesso-fb">Conectar-se pelo Facebook</label>
+                </span>
+                <br>
+                <span class="last-span">
+                    <button id="acesso-gl"><img src="../img/Google.png" alt="Botão Google"></button><label
+                        for="acesso-gl">Conectar-se pelo Google</label>
+                </span> -->
+            </div>
+        </form>
+    </main>
+    <%if(error) { %>
+        <div class="alert-error"><%= error %></div>
+    <%} %>
+    <%- include('./partials/footer') %>
+</body>
+
+</html>
