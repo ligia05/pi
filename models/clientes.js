@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes)=>{
-
-    return sequelize.define(
+let cliente =sequelize.define(
         "clientes", // Nome do model
         {
             id_cliente: {
@@ -30,5 +29,7 @@ module.exports = (sequelize, DataTypes)=>{
             tableName: "cliente"
         }
     );
+    return cliente
+
 
 }

@@ -1,39 +1,46 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Loja Express</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
+    rel="stylesheet"
+  />
 
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    
-     <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
-      rel="stylesheet"/>
-    
   </head>
-<main>
+  <body>
+    <link rel="stylesheet" href="../stylesheets/formu.css">
+   
+  
+<form action="/adm/formulario" method="post">
         
-
-    <form method="post" action="/usuarios/add" id="formCadastrar">
-        <h2>Cadastre-se</h2>
-        <label>
+<div class="tudo">
+    <div class="grid">
+        <h2 class="cad">Cadastre-se</h2>
+        <label class="name">
             <span>*Nome Completo</span>
-            <input type="text" name="nome" value="submit">
+            <input  type="text" name="nome" >
         </label>
         
         <label>
-            <span>*CPF:</span>
-            <input type="number" name="cpf" value="submit">
+            <span>E-mail</span>
+            <input type="email" name="cpf" >
         </label>
         <label>
-            <span>*Data de Nascimento:</span>
-            <input type="date" name="data" value="submit" >
+            <span>Senha</span>
+            <input type="password" name="senha"  >
         </label>
+        <span>Confirme a Senha</span>
+        <input type="password" name="senha"  >
+    </label>
+
         <label>
             <span>Endereço:</span>
-            <input type="text" name="endereco" value="submit" >
-            <span>rua</span>
+            <input type="text" name="endereco"  >
+            
         </label>
         
         <label type="text" name="rua" value="submit"></label>
@@ -41,3 +48,8 @@
             <button type="submit">Cadastrar</button>
         </label>
     </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -43,7 +43,7 @@ const operacionalController = {
         meusItens.marca = marca
         meusItens.preco= preco
         meusItens.tipo = tipo
-        meusItens.cliente= cliente
+     
         meusItens.imagem = "/img/posters/" + imagem
         await meusItens.save()
 

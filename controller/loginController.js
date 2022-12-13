@@ -40,7 +40,7 @@ module.exports = {
 
       req.session.usuario = novoUsuario
 
-      res.redirect('/loja')
+      res.redirect('/login')
     } else {
       res.render("loja", { errors: errors.mapped(), old: req.body });
     }
