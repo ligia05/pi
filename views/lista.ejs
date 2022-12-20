@@ -1,0 +1,50 @@
+<%- include('./partials/header') %>
+<link rel="stylesheet" href="css/styleSemFundo.css" />
+<link rel="stylesheet" href="css/lista.css" />
+
+<div class="busc">
+  <form action="/buscar" method="GET">
+    <input class="bus" type="text" id="busca" name="key" />
+    <button class="bt" type="submit">busca</button>
+  </form>
+</div>
+
+<% filmesCadastrados.forEach(umFilme =>{ %>
+<p class="titulo">Titulo: <%= umFilme.titulo %></p>
+<br>
+<p class="ano">Ano de Lançamento:<%= umFilme.ano %></p>
+<p class="duracao">Duração em Minutos: <%= umFilme.duracao %></p>
+<p class="resumo">Resumo: <%= umFilme.resumo %></p>
+<% umFilme.humor.forEach(h => { %>
+ <p class="humor"> Humor: <%= h.nome %> </p>
+<% }) %>
+<br>
+<img class="ima" src="<%= umFilme.imagem %>" alt="" />
+<br>
+<br>
+<form action="/apagar/<%=umFilme.id%>?_method=DELETE" method="POST">
+  
+    <button class="apaga" type="submit">apagar</button>
+</form>
+<br>
+<form action="/editar/<%=umFilme.id%>" method="PUT">
+  <button class="edita" type="submit">editar</button>
+</form>
+<div>
+    <br>
+  
+</div>
+<% }) %>
+
+<% if(paginas != 0) { %>
+  <p class="proxima">Próxima Página</p>
+<div class="paginacao">
+  
+  <ul>
+    <% for (let index = 1; index <= paginas; index++){ %>
+      <li class="item-paginas"><a class="item-pagina" href="/lista?page=<%= index %> "><%= index %> </a></li>
+    <% } %>
+  </ul>
+</div>
+<% } %>
+Footer

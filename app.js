@@ -1,18 +1,21 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var acesso= require('./Middlewares/acesso');
-var validador = require('./Middlewares/validador');
-var index = require('./Router/indexRouter');
-var loja = require('./Router/lojaRouter');
-var adm = require('./Router/admRouter');
-var itens = require('./Router/itensRouter');
-var cliente= require('./Router/clienteRouter');
-//var usersRouter = require('./Router/user');
+const express = require('express');
+const path = require('path');const createError = require('http-errors');
+const session= require('express-session')
+const method= require ('method-override')
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const acesso= require('./Middlewares/acesso');
 
-var app = express();
+
+
+const index = require('./Router/indexRouter');
+const loja = require('./Router/lojaRouter');
+const adm = require('./Router/admRouter');
+const itens = require('./Router/itensRouter');
+const clientes= require('./Router/clienteRouter');
+//const usersRouter = require('./Router/user');
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,19 +30,17 @@ app.use(acesso);
 app.use('/', index);
 app.use('/', loja);
 app.use('/adm', adm);
-app.use('/adm', cliente);
+app.use('/adm', clientes);
 
 
 //app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
 
-// error handler
+
+
+
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

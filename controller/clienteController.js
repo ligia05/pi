@@ -4,12 +4,21 @@ const fs = require('fs');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op
 const clienteController = {
+    create: async (req, res, next) => {
+        try {
+            const cliente = await clientes.create(req.body);
 
+            return({clientes});
+        } catch (error) {
+            next(error);
+        }
+    },
+    
     buscar: async (req, res) => {
         const { key } = req.query;
         const cliente = await clientes.findAll({
             where: {
-                clientes: {
+                nome: {
                     [Op.like]: `%${key}%`
                 }
             },
@@ -17,20 +26,29 @@ const clienteController = {
         });
         return res.render('lista', { clienteCadastrados: clientes, paginas: 0 })
     },
+    
     editar: async (req, res) => {
         const { id } = req.params;
-        const cliente = await clientes.findByPk(id, {
+        const {clientes} = await clientes.findByPk(id, {
             include: ['id']
         });
-        return res.render('formulario', { cliente })
+        return res.render('formulario', { clientes })
     },
     update: async (req, res) => {
-        let errors = validationResult(req)
-        let emailCadastrado = await clientes.findAll({
+       const {id_cliente} =req.params;
+       const {nome,email,senha,endereco}=req.body
+       console.log(req.body)
+        const meusclientes =await clientes.findone({
             where: {
-                email: req.body.email
-            }
-        })
+                id_cliente
+            },
+        });
+                meusclientes.id = id_cliente
+                meusclientes.nome = nome
+                meusclientes.email = email
+                meusclientes.senha = senha
+                meusclientes.endereco = endereco
+                 await meusclientens.save()
 
         // Verificando se e-mail já está cadastrado
         if (emailCadastrado[0] != undefined) {
@@ -44,15 +62,15 @@ const clienteController = {
 
             const { nome, email, senha, endereco } = req.body;
             const hash = bcrypt.hashSync(senha, 10)
-            const novocliente = await clientes.create(
+            const meusclientes = await clientes.create(
                 { nome, email, senha, endereco: hash }
             ).catch(err => console.log(err))
 
             // Criando session do clientes recém cadastrado para conseguir redirecionar sem fazer login
-            novocliente.senha = undefined
-            delete novocliente.senha
+            meusclientes.senha = undefined
+            delete meusclientes.senha
 
-            req.session.clientes = novocliente
+            req.session.clientes = meusclientes
 
             res.redirect('/loja')
         } else {
@@ -64,7 +82,7 @@ const clienteController = {
         await clientes.destroy({ where: { id: id_cliente } });
         return res.redirect("/lista")
     },
-    /*postformulario: async (req, res) => {
+  postformulario: async (req, res) => {
         try {
             let erros = validationResult(req)
             console.log(erros.isEmpty())
@@ -72,34 +90,26 @@ const clienteController = {
             if (erros.isEmpty()) {
                 const { nome, email, senha, endereco } = req.body;
 
-                meusclientes.id = id_cliente
-                meusclientes.nome = nome
-                meusclientes.email = email
-                meusclientes.senha = senha
-                meusclientes.endereco = endereco
-
-                const id_cliente = await meusclientens.save()
+            }    
 
                 if (Array.isArray(clientes)) {
                     clientes.forEach(async clientes => {
                         await clientes.create({
-                            id_clientes: id_cliente.id
+                            id_clientes: id_clientes.id
 
                         }),
 
-                            req.app.locals.mensagemCadastroitem = 'cliente cadastrado com sucesso'
-                        req.app.locals.errors = erros.mapped();
+                            req.app.locals.mensagemCadastrocliente = 'cliente cadastrado com sucesso'
+                        
                         return res.redirect('/formulario')
                         res.render("formulario", { errors: erros.mapped(), old: req.body });
                     }
-                    }catch (error) {
-                    console.try(error);
+                    )}
                 }
-            },
-
-
-
-        }          
-            */
-}
-module.exports = clienteController;
+                    catch (error) {
+                        console.trace(error);
+                    }
+            
+                },
+        }
+        module.exports=clienteController;

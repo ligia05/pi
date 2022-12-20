@@ -1,5 +1,6 @@
 const  {itens}  = require('../models');
 const { validationResult } = require('express-validator');
+const validacoes=  require('../Middlewares/validador');
 const admController = {
     form: async (req, res) => {
        
