@@ -1,4 +1,4 @@
-const { clientes } = require('../models');
+const { sequelize,clientes } = require('../models');
 const { validationResult } = require('express-validator');
 const fs = require('fs');
 const Sequelize = require('sequelize');
@@ -95,7 +95,7 @@ const clienteController = {
                 if (Array.isArray(clientes)) {
                     clientes.forEach(async clientes => {
                         await clientes.create({
-                            id_clientes: id_clientes.id
+                            id_clientes:clientes.id
 
                         }),
 
@@ -112,4 +112,4 @@ const clienteController = {
             
                 },
         }
-        module.exports=clienteController;
+        module.exports= clienteController;

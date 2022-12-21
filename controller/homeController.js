@@ -1,9 +1,16 @@
 
+const { validationResult } = require('express-validator');
 
 
-const HomeController = {
-    home: (req, res) => {
+
+const homeController = {
+    home: (req, res,next) => {
       res.render("home");
     },
-}
-    module.exports = HomeController
+ 
+      loja: (req, res) =>{
+        res.render('loja')
+      }
+    }
+
+    module.exports = homeController

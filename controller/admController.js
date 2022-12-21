@@ -1,6 +1,5 @@
 const  {itens}  = require('../models');
-const { validationResult } = require('express-validator');
-const validacoes=  require('../Middlewares/validador');
+
 const admController = {
     form: async (req, res) => {
        
@@ -19,7 +18,7 @@ const admController = {
             console.log(erros.isEmpty())
 
             if (erros.isEmpty()) {
-                const { itens, cliente, tipo, modelo, preco, marca,        } = req.body
+                const { itens, cliente, tipo, modelo, preco, marca} = req.body
                 const imagem = req.file.filename;
                 console.log(req.body, req.file);
                 meusItens.produto = itens
@@ -33,7 +32,7 @@ const admController = {
                 if (Array.isArray(itens)) {
                     itens.forEach(async itens => {
                         await itens.create({
-                            itens_id: meusItens.id
+                            itens_id: itensId
 
                         }),
                             req.app.locals.mensagemCadastroitem = 'item cadastrado com sucesso'
