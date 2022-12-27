@@ -1,6 +1,8 @@
 const { sequelize,clientes } = require('../models');
 const { validationResult } = require('express-validator');
 const fs = require('fs');
+
+
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op
 const clienteController = {

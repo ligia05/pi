@@ -5,7 +5,6 @@ const fs = require('fs');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op
 const operacionalController = {
-
    busca: async (req, res) => {
         const { key } = req.query;
         const itens = await Itens.findAll({
