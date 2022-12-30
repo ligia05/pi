@@ -15,7 +15,7 @@ html{
         position:fixed;
         top: 0;
         right: 0;
-        width: 400px;
+        width: 250px;
         padding: 20px;
         background-color: rgb(50, 30, 50);
         margin-top: 200px;
@@ -47,24 +47,108 @@ html{
       margin-left: 20px;
    }
 
-       .prod{
-         display: flex;
-         width: 210px;
-         height: 320px;
-         margin-left: 20px;
-     margin-top: 20px;
-       }
-       .prods{
-         display: flex;
-         width: 210px;
-         height: 320px;
-         margin-left: 20px;
+   
+       
+     .prod{
+         
+         width:1000px;
+         margin-left: 5px;
          margin-top: 80px;
+      
+
 
        }
+       div>.um {
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-left: 20px;
+       
+      }
       
+      div>.dois{
+        display: flex;
+        justify-self: center;
+        width: 180px;
+        height: 300px;
+        margin-top: -300px;
+        margin-left: 220px;
+        justify-self: center;
+       }
+       div>.tres{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: -300px;
+        margin-left: 420px;
+       }
+       div> .quatro{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 20px;
+       }
+       div> .cinco{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 30px;
+       
+       }
+       div> .seis{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 20px;
+       }
+       .produto{
+        display: flex;
+        
     
-
+       }
+    .poder{
+      font-size: 35px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+       .relogio{
+       display: flex;
+      
+       flex-direction: row;
+        margin-left: 5px;
+        margin-top: 20px;
+       }
+       .melhore{
+        display: flex;
+       flex-direction: row;
+        margin-left: 20px;
+       }
+       div > .sete{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-left: 20px;
+       }
+       div > .oito{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-left: 100px;
+       }
+       div > .nove{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-left: 120px;
+       }
+      .poderdois{
+        display: flex;
+      }
+      
+      
 
 
 
