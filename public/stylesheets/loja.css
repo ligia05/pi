@@ -125,6 +125,7 @@ html{
         display: flex;
        flex-direction: row;
         margin-left: 20px;
+        font-size: 25px;
        }
        div > .sete{
         display: flex;
@@ -146,7 +147,94 @@ html{
        }
       .poderdois{
         display: flex;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 15px;
       }
+      .outros{
+        display: flex;
+      font-size: 18px;
+      
+      }
+      div > .flip{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      div > .fold{
+        display: flex;
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+     .dobravel{
+        display: flex;
+        margin-left: 30px;
+        margin-top: 80px;
+        flex-wrap: wrap;
+        font-size: 25px;
+
+      }
+      .temnote{
+      display: flex;
+      font-size: 18px;
+      font-weight: bold;
+    margin-bottom: 20px;
+   margin-left: 20px;
+    }
+   
+    .note{
+      display: flex;
+      flex-direction: row;
+    
+    }
+    div > .noteum{
+      display: flex;
+        width: 180px;
+        height: 300px;
+      
+
+    }
+    div > .noteum{
+      display: flex;
+        width: 180px;
+        height: 300px;
+     
+    
+    }
+    div >.notedois{
+      
+        width: 180px;
+        height: 300px;
+    }
+    div > .notetres{
+      display: flex;
+        width: 180px;
+        height: 300px;
+    }
+      div > .motoum{
+      display: flex;
+        width: 180px;
+        height: 300px;
+
+    }
+     div > .motodois{
+      display: flex;
+        width: 180px;
+        height: 300px;
+
+    }
+     div > .mototres{
+      display: flex;
+        width: 180px;
+        height: 300px;
+
+    }
+
+
       
       
 
