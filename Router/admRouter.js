@@ -16,8 +16,8 @@ const admController = require('../controller/admController');
 const clienteController= require('../controller/clienteController');
 const validador = require('../Middlewares/cadastrador');
 
-router.get('/formulario', admController.form);
-router.post('/formulario',admController.postForm);
+router.get('/produtos', admController.form);
+router.post('/produtos',admController.postForm);
 //router.post("/formulario",upload.single('img'), operacionalController.store);
 
 module.exports= router;

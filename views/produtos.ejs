@@ -1,0 +1,101 @@
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+    <link rel="stylesheet" href="/css/formulario.css">
+    
+    <nav id="nav-adm">
+       
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="/loja">loja</a></li>
+        </ul>
+    </nav>
+   
+           <div class="msg"> 
+              <% if (locals.mensagemCadastroItens) { %>
+            <p><%= mensagemCadastroItens %> </p>   
+              <% } %>
+           </div>
+    
+            <form id="produtos" method="POST" action="/produtos" enctype="multipart/form-data">
+       <div class="modelo">
+        <label>
+             <p class="mo"> </label>
+             Modelo:</p>
+            <input  type="text" name="modelo" id="modelo" placeholder="Digite o modelo do filme ou da série">
+            <% if (locals.errors && errors.modelo) { %>
+                <p class="errMsg"><%= errors.modelo.msg %></p>
+            <% } %>
+   
+
+     
+
+<br>
+    <div class="marca">
+
+      <label>
+      <p class="mar">  Marca:</p>
+      <br>
+      <input type="text" name="marca" id="marca"   placeholder="marca">
+      <% if (locals.errors && errors.marca) { %>
+        <p class="errMsg"><%= errors.marca.msg %></p>
+    <% } %>
+    </label>
+    </div>
+    <br> 
+    <div class="preco">
+
+        <label>
+        <p class="pre">  Preço:</p>
+        <br>
+        <input type="decimal" name="preco" id="preco"   placeholder="duração">
+        <% if (locals.errors && errors.preco) { %>
+          <p class="errMsg"><%= errors.preco.msg %></p>
+      <% } %>
+      </label>
+      </div>
+           <div class="modelo">
+            <label>
+            <p class="an">  Modelo:</p> 
+            <br> 
+            <input  type="text" name="modelo" id="modelo"   placeholder="modelo">
+            <% if (locals.errors && errors.modelo) { %>
+                <p class="errMsg"><%= errors.modelo.msg %></p>
+            <% } %>
+        </label>
+          </div> 
+           
+  
+            <br>
+            <div class="tipo">
+                <label>
+                <p class="an"> Tipo:</p> 
+                <br> 
+                <input  type="text" name="tipo" id="tipo"   placeholder="tipo">
+                <% if (locals.errors && errors.tipo) { %>
+                    <p class="errMsg"><%= errors.tipo.msg %></p>
+                <% } %>
+            </label>
+              </div> 
+          
+         <div class="foto">
+            <label>
+            <div class="ims"><p> Clique e selecione imagem: </p></div>
+               <br>
+            <input class="im" accept="image/*" type="file" name="img" id="img">
+            <% if (locals.errors && errors.img) { %>
+                <p class="errMsg"><%= errors.img.msg %></p>
+            <% } %>
+        </label>
+         </div> 
+       <div class="salvar">
+    <button class="bt" type="submit">Salvar</button>
+</div>
+
+    </form>
+
+</div>
+</body>
+</html>

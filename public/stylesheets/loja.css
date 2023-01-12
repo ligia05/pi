@@ -189,33 +189,45 @@ html{
     .note{
       display: flex;
       flex-direction: row;
+      margin-left: 20px;
     
     }
     div > .noteum{
-      display: flex;
+      
         width: 180px;
         height: 300px;
-      
+      margin-left: 20px;
 
     }
-    div > .noteum{
-      display: flex;
-        width: 180px;
-        height: 300px;
-     
-    
+    .com{
+      margin-left: 30px;
+      margin-top:50px ;
+      font-size: 22px;
     }
+
+    
     div >.notedois{
       
         width: 180px;
         height: 300px;
+        margin-left: 20px;
     }
     div > .notetres{
       display: flex;
         width: 180px;
         height: 300px;
+        margin-left: 20px;
     }
-      div > .motoum{
+      .moto{
+        display:flex;
+        flex-direction: row;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+      .ouse{
+        margin-left: 20px;
+      }
+    div > .motoum{
       display: flex;
         width: 180px;
         height: 300px;
@@ -225,18 +237,142 @@ html{
       display: flex;
         width: 180px;
         height: 300px;
+        margin-left: 20px;
 
     }
      div > .mototres{
       display: flex;
         width: 180px;
         height: 300px;
+        margin-left: 40px;
 
     }
+    div > .maca{
+      font-weight: 600;
+    }
+    
+    .titulos{
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+      .smart{
+        display:flex;
+        flex-direction: row;
+      
+        margin-top: 30px;
+      }
+    div > .iphone{
+      display: flex;
+      margin-top: 30px;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+    .fones{
+      display: flex;
+      flex-direction: row;
+     margin-left: 25px;
+     margin-top: 30px;
+    }
+    .fonesdois{
+      display: flex;
+      flex-direction: row;
+     margin-left: 25px;
+     margin-top: 45px;
+    }
+    div > .appleum{
+     
+      width: 180px;
+        height: 300px; 
+        
+    }
+    div > .appledois{
+      width: 180px;
+        height: 300px; 
+        margin-left: 30px;
+    }
+    div > .appletres{
+      width: 180px;
+        height: 300px; 
+        margin-left: 55px;
+    }
+    div > .applequatro{
+      width: 180px;
+        height: 300px; 
+    }
+    div > .applecinco{
+      width: 180px;
+        height: 300px;
+        margin-left: 30px;
+    }
+    .noteair{
+      display: flex;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+     .nt{
+      display: flex;
+      margin-left: 20px; 
+    }
+    .notemaca{
+      display: flex;
+    margin-top: 30px;
+    }
+    div > .macum{
+      width: 180px;
+      height: 300px;
+      margin-left: 25px;
+    }
+    div > .macdois{
+      width: 180px;
+      height: 300px;
+      margin-left:35px;
+    }
+    div > .mactres{
+      width: 180px;
+      height: 300px;
+     margin-left:45px; 
+    }
+    .btum {
+      display: flex;
+      background-color: rgba(67, 34, 122, 0.904);
+    
+      height: 25px;
+      width: 90px;
+      font-size: 15px;
+      
+      border-radius: 10px;
+      color: white;
+
+  } 
+  .btdois {
+    display: flex;
+    background-color: rgba(67, 34, 122, 0.904);
+  
+    height: 25px;
+    width: 90px;
+    font-size: 15px;
+    
+    border-radius: 10px;
+    color: white;
+  }
+  .bttres {
+    display: flex;
+    background-color: rgba(67, 34, 122, 0.904);
+  
+    height: 25px;
+    width: 90px;
+    font-size: 15px;
+    margin-left: 350px;
+    border-radius: 10px;
+    color: white;
+  }
+ 
 
 
-      
-      
+
+
+
+
 
 
 

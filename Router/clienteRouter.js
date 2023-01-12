@@ -4,6 +4,6 @@ const clienteController= require('../controller/clienteController')
 const validador = require('../Middlewares/cadastrador')
 
 
-router.get('/formulario',validador,clienteController.buscar);
+router.get('/protudos',validador,clienteController.buscar);
 
 module.exports=router

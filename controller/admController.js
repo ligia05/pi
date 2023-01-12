@@ -5,7 +5,7 @@ const admController = {
        
         try {
             let itensLoja = await itens.findAll()  
-            res.render('formulario', { itensLoja });
+            res.render('produtos', { itensLoja });
         } catch (error) {
           console.log(error)  
         }
@@ -36,7 +36,7 @@ const admController = {
 
                         }),
                             req.app.locals.mensagemCadastroitem = 'item cadastrado com sucesso'
-                        return res.redirect('/formulario');
+                        return res.redirect('/produtos');
                     }
      
                 )}
