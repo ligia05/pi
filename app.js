@@ -9,7 +9,7 @@ const logger = require('morgan');
 
 const loja = require('./Router/homeRouter');
 const adm = require('./Router/admRouter');
-
+const cadastro = require('./Router/clienteRouter')
 const clientes= require('./Router/clienteRouter');
 const home = require('./Router/homeRouter');
 const acesso= require('./Middlewares/acesso');
@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', loja);
 app.use('/', home);
 
+
 app.use('/adm', adm);
 app.use('/adm', clientes);
 
@@ -41,7 +42,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next){
+app.use(function(err, req, res){
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

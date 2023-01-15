@@ -38,9 +38,9 @@ module.exports = {
       delete novoclientes.senha
       req.session.clientes = novoclientes
 
-      res.redirect('/escolha_estado')
+      res.redirect('/cadastro')
     } else {
-      res.render("cadastro", { errors: errors.mapped(), old: req.body });
+      res.render("loja", { errors: errors.mapped(), old: req.body });
     }
   },
 

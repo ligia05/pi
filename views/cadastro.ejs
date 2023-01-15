@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja Express</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
+    rel="stylesheet"
+  />
+
+  </head>
+<body>
+    <%- include('./parts/header') %>
+
+        <main>
+            <!-- <form class="form" action="cadastro" method="post" enctype="multipart/form-data"> -->
+            <form class="form" action="cadastro" method="post">
+                <label for="nome">Nome*</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="<%= locals.old && old.nome %>">
+                <% if (locals.errors && errors.nome) { %>
+                    <p class="errMsg"><%= errors.nome.msg %></p>
+                <% } %>
+                <br>
+
+                <!-- <label for="sobrenome">Sobrenome*</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome"> -->
+                <label for="email">E-mail*</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="errMsg"><%= errors.email.msg %></p>
+                <% } %>
+                <br>
+
+                <label for="senha">Senha*</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite a senha">
+                <% if (locals.errors && errors.senha) { %>
+                    <p class="errMsg"><%= errors.senha.msg %></p>
+                <% } %>
+                <br>
+
+                <label for="confirmar-password">Confirmar senha*</label>
+                <input type="password" name="confirmarSenha" id="confirmar-password" placeholder="Confirme a senha">
+                <% if (locals.errors && errors.confirmarSenha) { %>
+                    <p class="errMsg"><%= errors.confirmarSenha.msg %></p>
+                <% } %>
+                <br>
+                <form class="form" action="cadastro" method="post">
+                    <label for="endereco">Endereço*</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" value="<%= locals.old && old.endereco %>">
+                    <% if (locals.errors && errors.endereco) { %>
+                        <p class="errMsg"><%= errors.endereco.msg %></p>
+                    <% } %>
+                    <br>
+
+                <div class="button-registro">
+                    <button type="submit" id="button-registro">Registrar Gratuitamente</button>
+                </div>
+            </form>
+        </main>
+
+        <%- include('./partials/footer') %>
+
+</body>
+
+</html>

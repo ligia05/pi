@@ -23,11 +23,11 @@ const operacionalController = {
             include:['itens']
         });
         const editItens= await itens.findAll();
-        return res.render('editar', {editItens})
+        return res.render('produtos', {editItens})
     },
     update: async (req, res) => {
         const { id } = req.params;
-        const { Itens,cliente,tipo,modelo,preco,marca,produto} = req.body;
+        const { Itens,tipo,modelo,preco,marca} = req.body;
         console.log(req.body)
        
         const imagem = req.file.filename;
@@ -51,7 +51,7 @@ const operacionalController = {
     delete: async (req, res) => {
         const Itens_id = req.params.id;
         await Itens.destroy({ where: { id:Itens_id } });
-        return res.redirect("/formulario")
+        return res.redirect("/produtos")
     },
    
 }

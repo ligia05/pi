@@ -36,7 +36,7 @@ const clienteController = {
         });
         return res.render('formulario', { clientes })
     },
-    update: async (req, res) => {
+    updates: async (req, res) => {
        const {id_cliente} =req.params;
        const {nome,email,senha,endereco}=req.body
        console.log(req.body)
@@ -50,11 +50,11 @@ const clienteController = {
                 meusclientes.email = email
                 meusclientes.senha = senha
                 meusclientes.endereco = endereco
-                 await meusclientens.save()
+                 await meusclientes.save()
 
         // Verificando se e-mail já está cadastrado
         if (emailCadastrado[0] != undefined) {
-            return res.render("formulario", { old: req.body, errors: { email: { msg: "Email já cadastrado" } } });
+            return res.render("cadastro", { old: req.body, errors: { email: { msg: "Email já cadastrado" } } });
         }
         if (errors.isEmpty()) {
             console.log("Sem erros");
@@ -76,7 +76,7 @@ const clienteController = {
 
             res.redirect('/loja')
         } else {
-            res.render("formulario", { errors: errors.mapped(), old: req.body });
+            res.render("cadastro", { errors: errors.mapped(), old: req.body });
         }
     },
     delete: async (req, res) => {
@@ -103,8 +103,8 @@ const clienteController = {
 
                             req.app.locals.mensagemCadastrocliente = 'cliente cadastrado com sucesso'
                         
-                        return res.redirect('/formulario')
-                        res.render("formulario", { errors: erros.mapped(), old: req.body });
+                        return res.redirect('/cadastro')
+                        res.render("cadastro", { errors: erros.mapped(), old: req.body });
                     }
                     )}
                 }
