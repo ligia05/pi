@@ -13,7 +13,7 @@ const cadastro = require('./Router/clienteRouter')
 const clientes= require('./Router/clienteRouter');
 const home = require('./Router/homeRouter');
 const acesso= require('./Middlewares/acesso');
-const UsuarioLogado = require('./middlewares/validador');
+const usuario = require('./middlewares/validador');
 
 const app = express();
 
@@ -31,10 +31,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', loja);
 app.use('/', home);
+app.use('/', clientes);
 
 
 app.use('/adm', adm);
-app.use('/adm', clientes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

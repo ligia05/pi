@@ -3,8 +3,9 @@ const {clientes} = require('../models');
 
 const validacoes = [
     check('nome')
-        .notEmpty().withMessage('O campo nome deve ser preenchido').bail()
-        .isLength({ min: 2, max: 30 }).withMessage('O campo nome deve ter pelo menos 2 caracteres'),
+        .notEmpty().withMessage('O campo nome deve ser preenchido').bail(),
+        
+       
 
     // check('sobrenome')
     //     .notEmpty().withMessage('O campo sobrenome deve ser preenchido')
@@ -12,8 +13,8 @@ const validacoes = [
     //     .bail(),
 
     check('email')
-        .notEmpty().withMessage('O campo e-mail deve ser preenchido').bail()
-        .isEmail().withMessage('Precisa ser um e-mail válido').bail(),
+        .notEmpty().withMessage('O campo e-mail deve ser preenchido').bail(),
+        
         // .custom(value => {
         //     let usuario = Usuario.findAll({where: {email: value}});
         //       if (usuario) {
@@ -24,14 +25,10 @@ const validacoes = [
     check('senha')
         .notEmpty().withMessage('O campo de senha precisa ser preenchido'),
 
-    check('confirmarSenha')
-        .notEmpty().withMessage('O campo de confirmar senha precisa ser preenchido').bail()
-        .custom((value, { req }) => {
-            if (value !== req.body.senha) {
-                throw new Error('Senhas não conferem')
-            }
-            return true;
-        }),
+        check('endereco')
+        .notEmpty().withMessage('O campo endereço deve ser preenchido').bail()
+        .isEmail().withMessage('Precisa ser um endereço válido').bail(),
+       
 ];
 
 module.exports = validacoes;

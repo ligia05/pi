@@ -1,11 +1,11 @@
 const { check } = require('express-validator');
-const {itens} =require ('../models');
+const {clientes} =require ('../models');
 const validaForm = [
     check('nome')
         .trim()
         .escape()
         .notEmpty().withMessage('nome do item precisa ser preenchido').bail()
-        .isLength({ min: 2, max: 50 }).withMessage('nome do item deve ter pelo menos 2 caracteres').bail()
+        .isLength({ min: 2, max: 90 }).withMessage('nome do item deve ter pelo menos 2 caracteres').bail()
         .custom(async(value,{req})=>{
             const meusItens = await itens.findOne({
                 where: {

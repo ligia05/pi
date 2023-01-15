@@ -18,6 +18,7 @@ const validador = require('../Middlewares/cadastrador');
 
 router.get('/produtos', admController.form);
 router.post('/produtos',admController.postForm);
+
 //router.post("/formulario",upload.single('img'), operacionalController.store);
 
 module.exports= router;
