@@ -3,7 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
-module.exports = {
+const cadastroController = {
   cadastro: (req, res) => {
     res.render("cadastro");
   },
@@ -97,3 +97,4 @@ module.exports = {
     res.redirect('/');
   }
 };
+module.exports = cadastroController;
