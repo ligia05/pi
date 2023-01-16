@@ -9,11 +9,12 @@ const logger = require('morgan');
 
 const loja = require('./Router/homeRouter');
 const adm = require('./Router/admRouter');
-const cadastro = require('./Router/clienteRouter')
+
 const clientes= require('./Router/clienteRouter');
 const home = require('./Router/homeRouter');
 const acesso= require('./Middlewares/acesso');
-const usuario = require('./middlewares/validador');
+const validacoes = require('./middlewares/validador');
+const { cadastro } = require('./controller/cadastroController');
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/', clientes);
 
 
 app.use('/adm', adm);
+
 
 
 // catch 404 and forward to error handler

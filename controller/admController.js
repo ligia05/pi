@@ -1,7 +1,7 @@
 const  {itens}  = require('../models');
 
 const admController = {
-    form: async (req, res) => {
+    formItens: async (req, res) => {
        
         try {
             let itensLoja = await itens.findAll()  
@@ -12,7 +12,7 @@ const admController = {
 
        
     },
-    postForm: async (req, res) => {
+    postFormItens: async (req, res) => {
         try {
             let erros = validationResult(req)
             console.log(erros.isEmpty())

@@ -8,7 +8,7 @@ const Op = Sequelize.Op
 const clienteController = {
     create: async (req, res, next) => {
         try {
-            const cliente = await clientes.create(req.body);
+            const clientes = await clientes.create(req.body);
 
             return({clientes});
         } catch (error) {
@@ -18,7 +18,7 @@ const clienteController = {
     
     buscar: async (req, res) => {
         const { key } = req.query;
-        const cliente = await clientes.findAll({
+        const clientes = await clientes.findAll({
             where: {
                 nome: {
                     [Op.like]: `%${key}%`
@@ -74,9 +74,9 @@ const clienteController = {
 
             req.session.clientes = meusclientes
 
-            res.redirect('/loja')
+            res.redirect('/cadastro')
         } else {
-            res.render("cadastro", { errors: errors.mapped(), old: req.body });
+            res.render("loja", { errors: errors.mapped(), old: req.body });
         }
     },
     delete: async (req, res) => {
@@ -89,10 +89,7 @@ const clienteController = {
             let erros = validationResult(req)
             console.log(erros.isEmpty())
 
-            if (erros.isEmpty()) {
-                const { nome, email, senha, endereco } = req.body;
-
-            }    
+              
 
                 if (Array.isArray(clientes)) {
                     clientes.forEach(async clientes => {
@@ -111,6 +108,8 @@ const clienteController = {
                     catch (error) {
                         console.trace(error);
                     }
+                   
+
             
                 },
         }

@@ -1,5 +1,5 @@
 const { check } = require('express-validator');
-const {clientes} =require ('../models');
+const {itens} =require ('../models');
 const validaForm = [
     check('nome')
         .trim()

@@ -13,55 +13,74 @@
   </head>
 <body>
     <%- include('./parts/header') %>
+    
+    
+    <nav id="nav-adm">
+       
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="/loja">loja</a></li>
+        </ul>
+    </nav>
+   
+           <div class="msg"> 
+              <% if (locals.mensagemCadastroItens) { %>
+            <p><%= mensagemCadastroItens %> </p>   
+              <% } %>
+           </div>
+    
+            <form id="produtos" method="POST" action="/produtos" enctype="multipart/form-data">
+       <div class="modelo">
+        <label>
+             <p class="mo"> </label>
+             Modelo:</p>
+            <input  type="text" name="modelo" id="modelo" placeholder="Digite o modelo do filme ou da série">
+            <% if (locals.errors && errors.modelo) { %>
+                <p class="errMsg"><%= errors.modelo.msg %></p>
+            <% } %>
+   
 
-        <main>
-            <!-- <form class="form" action="cadastro" method="post" enctype="multipart/form-data"> -->
-            <form class="form" action="cadastro" method="post">
-                <label for="nome">Nome*</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="<%= locals.old && old.nome %>">
-                <% if (locals.errors && errors.nome) { %>
-                    <p class="errMsg"><%= errors.nome.msg %></p>
+     
+
+<br>
+   
+    <div class="nome">
+
+        <label>
+        <p class="pre">Nome:</p>
+        <br>
+        <input type="name" name="nome" id="nome"   placeholder="">
+        <% if (locals.errors && errors.nome) { %>
+          <p class="errMsg"><%= errors.nome.msg %></p>
+      <% } %>
+      </label>
+      </div>
+           <div class="email">
+            <label>
+            <p class="an"> E-mail:</p> 
+            <br> 
+            <input  type="email" name="email" id="email"   placeholder="email">
+            <% if (locals.errors && errors.email) { %>
+                <p class="errMsg"><%= errors.email.msg %></p>
+            <% } %>
+        </label>
+          </div> 
+           
+  
+            <br>
+            <div class="endereco">
+                <label>
+                <p class="an">Endereço:</p> 
+                <br> 
+                <input  type="text" name="endereco" id="endereco"   placeholder="">
+                <% if (locals.errors && errors.endereco) { %>
+                    <p class="errMsg"><%= errors.endereco.msg %></p>
                 <% } %>
-                <br>
-
-                <!-- <label for="sobrenome">Sobrenome*</label>
-                <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome"> -->
-                <label for="email">E-mail*</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email %>">
-                <% if (locals.errors && errors.email) { %>
-                    <p class="errMsg"><%= errors.email.msg %></p>
-                <% } %>
-                <br>
-
-                <label for="senha">Senha*</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite a senha">
-                <% if (locals.errors && errors.senha) { %>
-                    <p class="errMsg"><%= errors.senha.msg %></p>
-                <% } %>
-                <br>
-
-                <label for="confirmar-password">Confirmar senha*</label>
-                <input type="password" name="confirmarSenha" id="confirmar-password" placeholder="Confirme a senha">
-                <% if (locals.errors && errors.confirmarSenha) { %>
-                    <p class="errMsg"><%= errors.confirmarSenha.msg %></p>
-                <% } %>
-                <br>
-                <form class="form" action="cadastro" method="post">
-                    <label for="endereco">Endereço*</label>
-                    <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" value="<%= locals.old && old.endereco %>">
-                    <% if (locals.errors && errors.endereco) { %>
-                        <p class="errMsg"><%= errors.endereco.msg %></p>
-                    <% } %>
-                    <br>
-
-                <div class="button-registro">
-                    <button type="submit" id="button-registro">Registrar Gratuitamente</button>
-                </div>
-            </form>
-        </main>
-
-        <%- include('./partials/footer') %>
-
-</body>
-
-</html>
+            </label>
+              </div> 
+          
+        
+       <
+    <button class="btn" type="submit">Salvar</button>
