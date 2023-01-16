@@ -2,18 +2,13 @@
 <html>
   <head>
     <title>Loja Express</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap"
-    rel="stylesheet"
-  />
-
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Heebo&family=Kalam:wght@700&family=Mukta:wght@300&family=Pompiere&family=Poppins:wght@200&family=Secular+One&display=swap" rel="stylesheet"/>
   </head>
-<body>
+  <body>
     <%- include('./parts/header') %>
-    
     
     <nav id="nav-adm">
        
@@ -25,62 +20,56 @@
         </ul>
     </nav>
    
-           <div class="msg"> 
-              <% if (locals.mensagemCadastroItens) { %>
-            <p><%= mensagemCadastroItens %> </p>   
-              <% } %>
-           </div>
-    
-            <form id="produtos" method="POST" action="/produtos" enctype="multipart/form-data">
-       <div class="modelo">
-        <label>
-             <p class="mo"> </label>
-             Modelo:</p>
-            <input  type="text" name="modelo" id="modelo" placeholder="Digite o modelo do filme ou da série">
-            <% if (locals.errors && errors.modelo) { %>
-                <p class="errMsg"><%= errors.modelo.msg %></p>
-            <% } %>
-   
-
-     
-
-<br>
-   
-    <div class="nome">
-
-        <label>
-        <p class="pre">Nome:</p>
-        <br>
-        <input type="name" name="nome" id="nome"   placeholder="">
-        <% if (locals.errors && errors.nome) { %>
-          <p class="errMsg"><%= errors.nome.msg %></p>
+    <div class="msg"> 
+      <% if (locals.mensagemCadastroItens) { %>
+        <p><%= mensagemCadastroItens %> </p>   
       <% } %>
-      </label>
-      </div>
-           <div class="email">
-            <label>
-            <p class="an"> E-mail:</p> 
-            <br> 
-            <input  type="email" name="email" id="email"   placeholder="email">
-            <% if (locals.errors && errors.email) { %>
-                <p class="errMsg"><%= errors.email.msg %></p>
-            <% } %>
+    </div>
+    
+    <form id="produtos" method="POST" action="/clientes/cadastro">
+      
+      <div class="nome">
+        <label>
+          <p class="pre">Nome:</p>
+          <input type="name" name="nome" id="nome"   placeholder="">
+          <% if (locals.errors && errors.nome) { %>
+            <p class="errMsg"><%= errors.nome.msg %></p>
+          <% } %>
         </label>
-          </div> 
-           
+      </div>
+
+      <div class="email">
+        <label>
+          <p class="an"> E-mail:</p> 
+          <input  type="email" name="email" id="email"   placeholder="email">
+          <% if (locals.errors && errors.email) { %>
+            <p class="errMsg"><%= errors.email.msg %></p>
+          <% } %>
+        </label>
+      </div> 
+      
+      <div class="senha">
+        <label>
+          <p class="an">Senha:</p> 
+          <input  type="password" name="senha" id="senha"   placeholder="">
+          <% if (locals.errors && errors.senha) { %>
+            <p class="errMsg"><%= errors.senha.msg %></p>
+          <% } %>
+        </label>
+      </div> 
   
-            <br>
-            <div class="endereco">
-                <label>
-                <p class="an">Endereço:</p> 
-                <br> 
-                <input  type="text" name="endereco" id="endereco"   placeholder="">
-                <% if (locals.errors && errors.endereco) { %>
-                    <p class="errMsg"><%= errors.endereco.msg %></p>
-                <% } %>
-            </label>
-              </div> 
+      <div class="endereco">
+        <label>
+          <p class="an">Endereço:</p> 
+          <input  type="text" name="endereco" id="endereco"   placeholder="">
+          <% if (locals.errors && errors.endereco) { %>
+            <p class="errMsg"><%= errors.endereco.msg %></p>
+          <% } %>
+        </label>
+      </div> 
           
-        
-       <
-    <button class="btn" type="submit">Salvar</button>
+      <button class="btn" type="submit">Salvar</button>
+
+    </form>
+  </body>
+</html>

@@ -6,11 +6,10 @@ const loja = require('../controller/homeController')
 const cadastroController = require ('../controller/cadastroController')
 const validador = require('../Middlewares/validaForm')
 const log = require('../Middlewares/log');
-const homeController = require('../controller/homeController');
-router.get('/',homeController.home)
-router.get ('/loja',homeController.loja)
-router.get('/cadastro',clienteController.create);
-router.post('/cadastro',validador,cadastroController.store)
+
+
+router.get('/cadastro',clienteController.showCadastrar);
+router.post('/cadastro',validador,clienteController.store)
 
 router.get('/login',log,cadastroController.showlogin)
 router.post('/login',cadastroController.login)

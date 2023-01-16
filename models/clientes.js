@@ -26,7 +26,8 @@ let cliente =sequelize.define(
             }
         },
         {
-            tableName: "cliente"
+            tableName: "cliente",
+            timestamps: false
         }
     );
     return cliente
