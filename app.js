@@ -7,13 +7,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 
-const loja = require('./Router/lojaRouter');
+
+
 const adm = require('./Router/admRouter');
-const loja = require('../controller/homeController')
 const clientes= require('./Router/clienteRouter');
 const home = require('./Router/homeRouter');
 const acesso= require('./Middlewares/acesso');
-const validacoes = require('./Middlewares/validaForm');
 const { cadastro } = require('./controller/cadastroController');
 const validaForm = require('./Middlewares/cadastrador');
 
@@ -31,10 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-aapp.use('/', loja);
+
 app.use('/', home);
 app.use('/cadastro', validaForm,cadastro)
-app.use ('/', rotasOperacoes);;
+
 
 
 
