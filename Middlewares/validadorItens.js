@@ -10,6 +10,7 @@ const validaItens = [
    
     check('marca')
         .trim()
+        .escape()
         .notEmpty().withMessage('marca do item precisa ser preenchida').bail(),
         
 
