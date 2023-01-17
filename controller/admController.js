@@ -18,7 +18,7 @@ const admController = {
             console.log(erros.isEmpty())
 
             if (erros.isEmpty()) {
-                const { itens, cliente, tipo, modelo, preco, marca} = req.body
+                const { itens, tipo, modelo, preco, marca} = req.body
                 const imagem = req.file.filename;
                 console.log(req.body, req.file);
                 meusItens.produto = itens

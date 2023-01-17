@@ -14,7 +14,7 @@ const clientes = require('./Router/clienteRouter');
 const home = require('./Router/homeRouter');
 const acesso = require('./Middlewares/acesso');
 const { cadastro } = require('./controller/cadastroController');
-const validaForm = require('./Middlewares/cadastrador');
+
 
 const app = express();
 

@@ -1,36 +1,17 @@
+
+const {itens} = require ('../models');
 const { check } = require('express-validator');
-const {itens} =require ('../models');
-const validaForm = [
-    check('nome')
-        .trim()
-        .escape()
-        .notEmpty().withMessage('nome do item precisa ser preenchido').bail()
-        .isLength({ min: 2, max: 90 }).withMessage('nome do item deve ter pelo menos 2 caracteres').bail()
-        .custom(async(value,{req})=>{
-            const meusItens = await itens.findOne({
-                where: {
-                    titulo:value
-                }
-            });
-            if (meusItens){
-                throw new Error('itens já existe')
-            }
-            return true
-        }),
-    
+const validaItens = [
 
     check('tipo')
         .trim()
         .escape()
-        .notEmpty().withMessage('tipo do item precisa ser preenchido').bail()
-        .toInt(),
-
-
+        .notEmpty().withMessage('tipo do item precisa ser preenchido').bail(),
+   
     check('marca')
         .trim()
-        .escape()
-        .notEmpty().withMessage('marca do item precisa ser preenchida').bail()
-        .toInt(),
+        .notEmpty().withMessage('marca do item precisa ser preenchida').bail(),
+        
 
 
     check('preco')
@@ -49,4 +30,4 @@ const validaForm = [
         
     
 ];
-module.exports = validaForm;
+module.exports = validaItens;
