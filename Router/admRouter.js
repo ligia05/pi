@@ -14,10 +14,10 @@ const upload= multer({storage});
 
 const admController = require('../controller/admController');
 
-const cadastroItens = require('../Middlewares/cadastrador');
+const validadorItens = require('../Middlewares/validadorItens');
 
 router.get('/produtos', admController.formItens);
-router.post('/produtos',admController.postFormItens);
+router.post('/produtos',validadorItens, admController.postFormItens);
 
 //router.post("/formulario",upload.single('img'), operacionalController.store);
 
