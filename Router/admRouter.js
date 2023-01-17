@@ -13,8 +13,8 @@ const upload= multer({storage});
 
 
 const admController = require('../controller/admController');
-const clienteController= require('../controller/clienteController');
-const validador = require('../Middlewares/cadastrador');
+
+const cadastroItens = require('../Middlewares/cadastrador');
 
 router.get('/produtos', admController.formItens);
 router.post('/produtos',admController.postFormItens);

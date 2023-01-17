@@ -26,7 +26,7 @@ const admController = {
                 meusItens.marca = marca
                 meusItens.preco = preco
                 meusItens.tipo = tipo
-                meusItens.cliente = cliente
+                
                 meusItens.imagem = "/img/" + imagem
                 const itensId = await meusItens.save()
                 if (Array.isArray(itens)) {
