@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', home);
-
+app.use('/', adm);
 app.use('/clientes', clientes)
 
 

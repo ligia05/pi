@@ -4,14 +4,25 @@ const { check } = require('express-validator');
 const validaItens = [
 
     check('tipo')
-        .trim()
-        .escape()
-        .notEmpty().withMessage('tipo do item precisa ser preenchido').bail(),
-   
+    .trim()
+    .escape()
+    .notEmpty()
+    .isLength()
+    .custom(async(value,{req})=>{
+            const meusItens = await itens.findOne({
+                where: {
+                    id_itens:value
+                }
+            });
+            if (meusItens){
+                throw new Error('itens já existe')
+            }
+            return true
+        }),
     check('marca')
-        .trim()
-        .escape()
-        .notEmpty().withMessage('marca do item precisa ser preenchida').bail(),
+    .trim()
+    .escape()
+    .notEmpty().withMessage('marca do item precisa ser preenchida').bail(),
         
 
 

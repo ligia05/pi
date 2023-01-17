@@ -14,8 +14,9 @@ const upload= multer({storage});
 
 const admController = require('../controller/admController');
 
-const validadorItens = require('../Middlewares/validadorItens').default;
+const validadorItens = require('../Middlewares/validadorItens');
 
+router.get('/prdutos',admController.showAdm)
 router.get('/produtos', admController.formItens);
 router.post('/produtos',validadorItens, admController.postFormItens);
 

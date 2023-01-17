@@ -1,6 +1,11 @@
 const  {itens}  = require('../models');
 
 const admController = {
+    showAdm: (req,res)=>{
+        res.render('produtos')
+    },
+    
+    
     formItens: async (req, res) => {
        
         try {
@@ -37,6 +42,7 @@ const admController = {
                         }),
                             req.app.locals.mensagemCadastroitem = 'item cadastrado com sucesso'
                         return res.redirect('/produtos');
+                        
                     }
      
                 )}
