@@ -1,7 +1,8 @@
 
 <body>
+    <link rel="stylesheet" href="../stylesheets/header.css">
     <%- include('./parts/header') %>
-    <link rel="stylesheet" href=".css">
+    
     
    
     <div class="msg"> 
@@ -15,7 +16,7 @@
         <div class="modelo">
             <label>
                 <p class="mo">  Modelo:</p>
-                <input  type="text" name="modelo" id="modelo" placeholder="Digite o modelo do filme ou da série">
+                <input  type="text" name="modelo" id="modelo" placeholder="">
                 <% if (locals.errors && errors.modelo) { %>
                     <p class="errMsg"><%= errors.modelo.msg %></p>
                 <% } %>
@@ -25,7 +26,7 @@
        <div class="marca">
             <label>
                 <p class="mar">Marca:</p>
-                <input type="text" name="marca" id="marca"   placeholder="marca">
+                <input type="text" name="marca" id="marca"   placeholder="">
                 <% if (locals.errors && errors.marca) { %>
                     <p class="errMsg"><%= errors.marca.msg %></p>
                 <% } %>
@@ -35,25 +36,18 @@
 
             <label>
                 <p class="pre">  Preço:</p>
-                <input type="decimal" name="preco" id="preco"   placeholder="duração">
+                <input type="decimal" name="preco" id="preco"   placeholder="">
                 <% if (locals.errors && errors.preco) { %>
                     <p class="errMsg"><%= errors.preco.msg %></p>
                 <% } %>
             </label>
         </div>
-        <div class="modelo">
-            <label>
-                <p class="an">  Modelo:</p> 
-                <input  type="text" name="modelo" id="modelo"   placeholder="modelo">
-                <% if (locals.errors && errors.modelo) { %>
-                    <p class="errMsg"><%= errors.modelo.msg %></p>
-                <% } %>
-            </label>
-        </div> 
+        
+         
         <div class="tipo">
             <label>
                 <p class="an">Tipo:</p> 
-                <input  type="text" name="tipo" id="tipo"   placeholder="tipo">
+                <input  type="text" name="tipo" id="tipo"   placeholder="">
                 <% if (locals.errors && errors.tipo) { %>
                 <p class="errMsg"><%= errors.tipo.msg %></p>
                 <% } %>

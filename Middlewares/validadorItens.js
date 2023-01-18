@@ -30,11 +30,11 @@ const validaItens = [
 
         .escape()
         .notEmpty().withMessage('preço do item precisa ser preenchido').bail()
-        .isLength({ min: 20, max: 80000 }).withMessage('preco do item está fora das especificações'),
+        .isNumeric().withMessage('preco do item está fora das especificações'),
 
-    check('images')
+    check('img')
    .custom(function(value,{req}){
-        if(req.file && req.file.mimetype.indexOf('images/') >=0){
+        if(req.file && req.file.mimetype.indexOf('image/') >=0){
             return true
         }
         return false

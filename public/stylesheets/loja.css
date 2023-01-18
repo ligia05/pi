@@ -1,372 +1,372 @@
 *{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html{
-    height: 100%;
-    font-size: 16px;  
-    background-color: rgba(0, 0, 0, 0.814);
-    color: white;
-    }
-
-     nav {
-        position:fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        padding: 20px;
-        background-color: rgb(50, 30, 50);
-        margin-top: 200px;
-        
-    }
-    .tds{
-       text-decoration: none; 
-       color: white;
-       margin-left: 20px;
-    }
-    
-    .note_sam{
-      padding: 20px;
-      width: 430px;
-   height: 230px;
-    }
-    .sams{
-      font-size: 40px;
-      margin-left: 10px;
-    }
-    .galaxy{
-      font-size: 30px;
-      margin-left: 35px;
-    }
-   
-
-   
-   .ts{
-      margin-left: 20px;
-   }
-
-   
-       
-     .prod{
-         
-         width:1000px;
-         margin-left: 5px;
-         margin-top: 80px;
-      
-
-
-       }
-       div>.um {
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 20px;
-       
-      }
-      
-      div>.dois{
-        display: flex;
-        justify-self: center;
-        width: 180px;
-        height: 300px;
-        margin-top: -300px;
-        margin-left: 220px;
-        justify-self: center;
-       }
-       div>.tres{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: -300px;
-        margin-left: 420px;
-       }
-       div> .quatro{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 20px;
-       }
-       div> .cinco{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 30px;
-       
-       }
-       div> .seis{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 20px;
-       }
-       .produto{
-        display: flex;
-        
-    
-       }
-    .poder{
-      font-size: 35px;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-       .relogio{
-       display: flex;
-      
-       flex-direction: row;
-        margin-left: 5px;
-        margin-top: 20px;
-       }
-       .melhore{
-        display: flex;
-       flex-direction: row;
-        margin-left: 20px;
-        font-size: 25px;
-       }
-       div > .sete{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 20px;
-       }
-       div > .oito{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 100px;
-       }
-       div > .nove{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 120px;
-       }
-      .poderdois{
-        display: flex;
-        font-size: 20px;
-        margin-top: 10px;
-        margin-left: 15px;
-      }
-      .outros{
-        display: flex;
-      font-size: 18px;
-      
-      }
-      div > .flip{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 50px;
-      }
-      div > .fold{
-        display: flex;
-        width: 180px;
-        height: 300px;
-        margin-top: 50px;
-        margin-left: 40px;
-      }
-     .dobravel{
-        display: flex;
-        margin-left: 30px;
-        margin-top: 80px;
-        flex-wrap: wrap;
-        font-size: 25px;
-
-      }
-      .temnote{
-      display: flex;
-      font-size: 18px;
-      font-weight: bold;
-    margin-bottom: 20px;
-   margin-left: 20px;
-    }
-   
-    .note{
-      display: flex;
-      flex-direction: row;
-      margin-left: 20px;
-    
-    }
-    div > .noteum{
-      
-        width: 180px;
-        height: 300px;
-      margin-left: 20px;
-
-    }
-    .com{
-      margin-left: 30px;
-      margin-top:50px ;
-      font-size: 22px;
-    }
-
-    
-    div >.notedois{
-      
-        width: 180px;
-        height: 300px;
-        margin-left: 20px;
-    }
-    div > .notetres{
-      display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 20px;
-    }
-      .moto{
-        display:flex;
-        flex-direction: row;
-        margin-left: 20px;
-        margin-top: 30px;
-      }
-      .ouse{
-        margin-left: 20px;
-      }
-    div > .motoum{
-      display: flex;
-        width: 180px;
-        height: 300px;
-
-    }
-     div > .motodois{
-      display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 20px;
-
-    }
-     div > .mototres{
-      display: flex;
-        width: 180px;
-        height: 300px;
-        margin-left: 40px;
-
-    }
-    div > .maca{
-      font-weight: 600;
-    }
-    
-    .titulos{
-      margin-left: 20px;
-      margin-top: 30px;
-    }
-      .smart{
-        display:flex;
-        flex-direction: row;
-      
-        margin-top: 30px;
-      }
-    div > .iphone{
-      display: flex;
-      margin-top: 30px;
-      font-size: 18px;
-      margin-left: 20px;
-    }
-    .fones{
-      display: flex;
-      flex-direction: row;
-     margin-left: 25px;
-     margin-top: 30px;
-    }
-    .fonesdois{
-      display: flex;
-      flex-direction: row;
-     margin-left: 25px;
-     margin-top: 45px;
-    }
-    div > .appleum{
-     
-      width: 180px;
-        height: 300px; 
-        
-    }
-    div > .appledois{
-      width: 180px;
-        height: 300px; 
-        margin-left: 30px;
-    }
-    div > .appletres{
-      width: 180px;
-        height: 300px; 
-        margin-left: 55px;
-    }
-    div > .applequatro{
-      width: 180px;
-        height: 300px; 
-    }
-    div > .applecinco{
-      width: 180px;
-        height: 300px;
-        margin-left: 30px;
-    }
-    .noteair{
-      display: flex;
-      margin-left: 20px;
-      margin-top: 30px;
-    }
-     .nt{
-      display: flex;
-      margin-left: 20px; 
-    }
-    .notemaca{
-      display: flex;
-    margin-top: 30px;
-    }
-    div > .macum{
-      width: 180px;
-      height: 300px;
-      margin-left: 25px;
-    }
-    div > .macdois{
-      width: 180px;
-      height: 300px;
-      margin-left:35px;
-    }
-    div > .mactres{
-      width: 180px;
-      height: 300px;
-     margin-left:45px; 
-    }
-    .btum {
-      display: flex;
-      background-color: rgba(67, 34, 122, 0.904);
-    
-      height: 25px;
-      width: 90px;
-      font-size: 15px;
-      
-      border-radius: 10px;
-      color: white;
-
-  } 
-  .btdois {
-    display: flex;
-    background-color: rgba(67, 34, 122, 0.904);
-  
-    height: 25px;
-    width: 90px;
-    font-size: 15px;
-    
-    border-radius: 10px;
-    color: white;
+  height: 100%;
+  font-size: 16px;  
+  background-color: rgba(0, 0, 0, 0.814);
+  color: white;
   }
-  .bttres {
-    display: flex;
-    background-color: rgba(67, 34, 122, 0.904);
+
+   nav {
+      position:fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      padding: 20px;
+      background-color: rgb(50, 30, 50);
+      margin-top: 200px;
+      
+  }
+  .tds{
+     text-decoration: none; 
+     color: white;
+     margin-left: 20px;
+  }
   
-    height: 25px;
-    width: 90px;
-    font-size: 15px;
-    margin-left: 350px;
-    border-radius: 10px;
-    color: white;
+  .note_sam{
+    padding: 20px;
+    width: 430px;
+ height: 230px;
+  }
+  .sams{
+    font-size: 40px;
+    margin-left: 10px;
+  }
+  .galaxy{
+    font-size: 30px;
+    margin-left: 35px;
   }
  
+
+ 
+ .ts{
+    margin-left: 20px;
+ }
+
+ 
+     
+   .prod{
+       
+       width:1000px;
+       margin-left: 5px;
+       margin-top: 80px;
+    
+
+
+     }
+     div>.um {
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 20px;
+     
+    }
+    
+    div>.dois{
+      display: flex;
+      justify-self: center;
+      width: 180px;
+      height: 300px;
+      margin-top: -300px;
+      margin-left: 220px;
+      justify-self: center;
+     }
+     div>.tres{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: -300px;
+      margin-left: 420px;
+     }
+     div> .quatro{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: 50px;
+      margin-left: 20px;
+     }
+     div> .cinco{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: 50px;
+      margin-left: 30px;
+     
+     }
+     div> .seis{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: 50px;
+      margin-left: 20px;
+     }
+     .produto{
+      display: flex;
+      
+  
+     }
+  .poder{
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+     .relogio{
+     display: flex;
+    
+     flex-direction: row;
+      margin-left: 5px;
+      margin-top: 20px;
+     }
+     .melhore{
+      display: flex;
+     flex-direction: row;
+      margin-left: 20px;
+      font-size: 25px;
+     }
+     div > .sete{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 20px;
+     }
+     div > .oito{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 100px;
+     }
+     div > .nove{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 120px;
+     }
+    .poderdois{
+      display: flex;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+    .outros{
+      display: flex;
+    font-size: 18px;
+    
+    }
+    div > .flip{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    div > .fold{
+      display: flex;
+      width: 180px;
+      height: 300px;
+      margin-top: 50px;
+      margin-left: 40px;
+    }
+   .dobravel{
+      display: flex;
+      margin-left: 30px;
+      margin-top: 80px;
+      flex-wrap: wrap;
+      font-size: 25px;
+
+    }
+    .temnote{
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+  margin-bottom: 20px;
+ margin-left: 20px;
+  }
+ 
+  .note{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  
+  }
+  div > .noteum{
+    
+      width: 180px;
+      height: 300px;
+    margin-left: 20px;
+
+  }
+  .com{
+    margin-left: 30px;
+    margin-top:50px ;
+    font-size: 22px;
+  }
+
+  
+  div >.notedois{
+    
+      width: 180px;
+      height: 300px;
+      margin-left: 20px;
+  }
+  div > .notetres{
+    display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 20px;
+  }
+    .moto{
+      display:flex;
+      flex-direction: row;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+    .ouse{
+      margin-left: 20px;
+    }
+  div > .motoum{
+    display: flex;
+      width: 180px;
+      height: 300px;
+
+  }
+   div > .motodois{
+    display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 20px;
+
+  }
+   div > .mototres{
+    display: flex;
+      width: 180px;
+      height: 300px;
+      margin-left: 40px;
+
+  }
+  div > .maca{
+    font-weight: 600;
+  }
+  
+  .titulos{
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+    .smart{
+      display:flex;
+      flex-direction: row;
+    
+      margin-top: 30px;
+    }
+  div > .iphone{
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  .fones{
+    display: flex;
+    flex-direction: row;
+   margin-left: 25px;
+   margin-top: 30px;
+  }
+  .fonesdois{
+    display: flex;
+    flex-direction: row;
+   margin-left: 25px;
+   margin-top: 45px;
+  }
+  div > .appleum{
+   
+    width: 180px;
+      height: 300px; 
+      
+  }
+  div > .appledois{
+    width: 180px;
+      height: 300px; 
+      margin-left: 30px;
+  }
+  div > .appletres{
+    width: 180px;
+      height: 300px; 
+      margin-left: 55px;
+  }
+  div > .applequatro{
+    width: 180px;
+      height: 300px; 
+  }
+  div > .applecinco{
+    width: 180px;
+      height: 300px;
+      margin-left: 30px;
+  }
+  .noteair{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+   .nt{
+    display: flex;
+    margin-left: 20px; 
+  }
+  .notemaca{
+    display: flex;
+  margin-top: 30px;
+  }
+  div > .macum{
+    width: 180px;
+    height: 300px;
+    margin-left: 25px;
+  }
+  div > .macdois{
+    width: 180px;
+    height: 300px;
+    margin-left:35px;
+  }
+  div > .mactres{
+    width: 180px;
+    height: 300px;
+   margin-left:45px; 
+  }
+  .btum {
+    display: flex;
+    background-color: rgba(67, 34, 122, 0.904);
+  
+    height: 25px;
+    width: 90px;
+    font-size: 15px;
+    
+    border-radius: 10px;
+    color: white;
+
+} 
+.btdois {
+  display: flex;
+  background-color: rgba(67, 34, 122, 0.904);
+
+  height: 25px;
+  width: 90px;
+  font-size: 15px;
+  
+  border-radius: 10px;
+  color: white;
+}
+.bttres {
+  display: flex;
+  background-color: rgba(67, 34, 122, 0.904);
+
+  height: 25px;
+  width: 90px;
+  font-size: 15px;
+  margin-left: 350px;
+  border-radius: 10px;
+  color: white;
+}
+
 
 
 

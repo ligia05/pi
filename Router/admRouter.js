@@ -16,9 +16,9 @@ const admController = require('../controller/admController');
 
 const validadorItens = require('../Middlewares/validadorItens');
 
-router.get('/prdutos',admController.showAdm)
+
 router.get('/produtos', admController.formItens);
-router.post('/produtos',validadorItens, admController.postFormItens);
+router.post('/produtos',upload.single('img'),validadorItens, admController.postFormItens);
 
 //router.post("/formulario",upload.single('img'), operacionalController.store);
 
